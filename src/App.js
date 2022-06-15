@@ -39,7 +39,7 @@ function App() {
       {/* <Coding /> */}
 
       <Routes>
-        <Route path="/" element={<Coding />} />
+        <Route path="coding_page" element={<Coding />} />
         <Route path="Portfolio_Website" element={<HomePage />} />
         {/* <Route path="/codeEditor" element={<CodeEditor />} /> */}
       </Routes>

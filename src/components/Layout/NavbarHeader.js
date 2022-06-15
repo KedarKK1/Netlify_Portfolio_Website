@@ -48,7 +48,7 @@ const NavbarHeader = () => {
           <Row style={{height: '100%',color: 'white'}} className="myRow" >
             <Col xxl={1} xl={1} lg={1} xs={0} md={0} sm={0} />
             <Col xxl={22} xl={22} lg={22} xs={24} md={24} sm={24} style={{textAlign: 'left'}} >
-              <Link to="/"><img src={kLogo} alt="Logo" className="myLogo" /></Link>
+              <Link to="/Portfolio_Website"><img src={kLogo} alt="Logo" className="myLogo" /></Link>
 
               <Menu theme="dark" mode="horizontal" style={{
                 float: 'right',
