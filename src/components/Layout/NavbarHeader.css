@@ -1,0 +1,11 @@
+.myRow
+{
+    overflow: hidden;
+    position: relative;
+
+}
+
+.myLogo{
+    height: 100% ;
+    position: absolute;
+}
