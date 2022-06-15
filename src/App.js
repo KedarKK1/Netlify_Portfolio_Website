@@ -40,7 +40,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="Portfolio_Website2" element={<Coding />} />
+        <Route path="Portfolio_Website" element={<Coding />} />
         {/* <Route path="/codeEditor" element={<CodeEditor />} /> */}
       </Routes>
 
