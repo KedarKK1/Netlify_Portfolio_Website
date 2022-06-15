@@ -140,11 +140,13 @@ const Coding = () => {
             <Content>my content</Content>
         </Layout> */}
         <div className="random_div">
+            Mra coding page
             <MyLayout />
             {/* Note giving id here will not make it work, give ID's to divs inside components */}
             <MySkills id="skills" />
             <MyProjects />
             <ContactMe />
+            
         </div>
 
 
