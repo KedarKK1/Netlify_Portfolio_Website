@@ -10,7 +10,7 @@ const MyProjects = () => {
             <h1> <b><u>My Projects</u></b> </h1>
             <Row>
                 <Col xxl={2} xl={2} lg={2} xs={2} md={2} sm={2} />
-                <Col xxl={6} xl={6} lg={6} xs={18} md={18} sm={18} >
+                <Col xxl={6} xl={6} lg={6} xs={20} md={20} sm={20} >
                     <Card
                         title="College Fest-Frontend+Integration"
                         // extra={<a href="#">More</a>}
@@ -25,7 +25,8 @@ const MyProjects = () => {
                     </Card>
                 </Col>
                 <Col xxl={1} xl={1} lg={1} xs={2} md={2} sm={2} />
-                <Col xxl={6} xl={6} lg={6} xs={18} md={18} sm={18} >
+                <Col xxl={0} xl={0} lg={0} xs={2} md={2} sm={2} />
+                <Col xxl={6} xl={6} lg={6} xs={20} md={20} sm={20} >
                     <Card
                         title="Ecommerce site(Frontend+Backend)"
                         // extra={<a href="#">More</a>}
@@ -40,7 +41,8 @@ const MyProjects = () => {
                     </Card>
                 </Col>
                 <Col xxl={1} xl={1} lg={1} xs={2} md={2} sm={2} />
-                <Col xxl={6} xl={6} lg={6} xs={18} md={18} sm={18} >
+                <Col xxl={0} xl={0} lg={0} xs={2} md={2} sm={2} />
+                <Col xxl={6} xl={6} lg={6} xs={20} md={20} sm={20} >
                     <Card
                         title="PanditMitra - Pandit Booking Website (Frontend + Backend)"
                         // extra={<a href="#">More</a>}

@@ -4,6 +4,7 @@ import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 import Coding from './components/Coding/Coding';
 import { Routes, Route, Link } from "react-router-dom";
 import HomePage from './pages/Home/HomePage';
+// import LandingPage from './components/LandingPage/LandingPage';
 // import CodeEditor from './components/Coding/CodeEditor';
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
       <Routes>
         <Route path="coding_page" element={<Coding />} />
         <Route path="Portfolio_Website" element={<HomePage />} />
+        {/* <Route path="" element={<LandingPage />} /> */}
         {/* <Route path="/codeEditor" element={<CodeEditor />} /> */}
       </Routes>
 

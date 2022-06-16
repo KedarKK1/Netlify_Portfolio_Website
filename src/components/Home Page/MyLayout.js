@@ -8,7 +8,7 @@ const MyLayout = () => {
   return (
     <>
         <Layout >
-            <Content style={{ marginTop: 30 }}>
+            <Content style={{ marginTop: 30 }} >
                 <Row>
                     <Col  xxl={1} xl={1} lg={1} xs={1} md={1} sm={1} />
 
@@ -27,7 +27,7 @@ const MyLayout = () => {
                             Welcome to my website
                         </h2>
                         <h5>
-                           I'm second year Computer Engineering student at Pune Institute of Computer Technology, Pune. I am interested in Web development and blockchain. Currently exploring Full Stack Web Development and Cloud Applications. I love watching anime and sit-coms.   
+                           I'm second year Computer Engineering student at Pune Institute of Computer Technology, Pune. I am interested in Web development and blockchain. Currently exploring Full Stack Web Development and AWS. I love watching anime and sit-coms.   
                         </h5>
                     </Col>
 

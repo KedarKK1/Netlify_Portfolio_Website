@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 // import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 import kLogo from "../../images/kLogo.jpg"
 import './NavbarHeader.css'
+// import { AppstoreOutlined, MailOutlined, SettingOutlined, heckOutlined, CloseOutlined, CheckOutlined } from '@ant-design/icons';
 
 const NavbarHeader = () => {
   return (
@@ -57,10 +58,10 @@ const NavbarHeader = () => {
                 width: '40%',
               }}>
 
-                <Menu.Item key={'skills'} ><a href="#skills" />My Skills</Menu.Item> 
-                <Menu.Item key={'projects'} ><a href="#projects" />My Projects</Menu.Item> 
-                <Menu.Item key={'resume'} ><a href="#resume" />My Resumé</Menu.Item> 
-                <Menu.Item key={'contact'} ><a href="#contact" />Contact Me</Menu.Item> 
+                <Menu.Item key={'skills'} ><a href="#skills"> My Skills</a></Menu.Item> 
+                <Menu.Item key={'projects'} ><a href="#projects">My Projects</a></Menu.Item> 
+                <Menu.Item key={'resume'} ><a href="https://drive.google.com/file/d/1zNywBJNqg6_v-h96pV4tcx5_WNXy9e2E/view?usp=sharing">My Resumé</a></Menu.Item> 
+                <Menu.Item key={'contact'} ><a href="#contact">Contact Me</a></Menu.Item> 
 
               </Menu>
             </Col>
