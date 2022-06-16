@@ -1,9 +1,11 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
+// import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 import Coding from './components/Coding/Coding';
-import { Routes, Route, Link } from "react-router-dom";
+// import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import HomePage from './pages/Home/HomePage';
+import FunPage from './pages/Fun/FunPage';
 // import LandingPage from './components/LandingPage/LandingPage';
 // import CodeEditor from './components/Coding/CodeEditor';
 
@@ -42,6 +44,7 @@ function App() {
       <Routes>
         <Route path="coding_page" element={<Coding />} />
         <Route path="Portfolio_Website" element={<HomePage />} />
+        <Route path="Portfolio_Website/Fun_Page" element={<FunPage />} />
         {/* <Route path="" element={<LandingPage />} /> */}
         {/* <Route path="/codeEditor" element={<CodeEditor />} /> */}
       </Routes>
