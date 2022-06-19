@@ -14,12 +14,12 @@ const MyLayout = () => {
 
                     <Col xxl={10} xl={10} lg={10} xs={22} md={22} sm={22} className="myCol" >
                         {/* AOS - Animate On Scroll Library data-aos="zoom-out" data-aos-delay="700" data-aos-once */}
-                        <img src={kkImg} alt="img" className="myImg"  />
+                        <img src={kkImg} alt="img" className="myImg" />
                     </Col>
                     <Col  xxl={1} xl={1} lg={1} xs={0} md={0} sm={0} />
                     <Col  xxl={10} xl={10} lg={10} xs={22} md={22} sm={22} style={{ overflow: 'hidden' }}>
                         <h2 className="my-3" >
-                            Arigato! <span><img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="45px" height="45px" /></span>
+                            Arigato! <span><img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="45px" height="45px"  alt="hiImg" /></span>
                         </h2>  
                         <h2>
                             I am <span><b><u>Kedar Koshti</u></b></span>

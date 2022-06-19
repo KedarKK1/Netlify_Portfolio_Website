@@ -1,13 +1,14 @@
 import "./Coding.css";
 // import {Card, Button, Row, Col, Container} from 'react-bootstrap';
 // import Pagination from 'react-bootstrap/Pagination';
-import React, {useState} from 'react';
+// import React, {useState} from 'react';
+import React from 'react';
 // import CodeEditor from "./CodeEditor";
 import NavbarHeader from "../Layout/NavbarHeader";
 import FooterHeader from "../Layout/FooterHeader";
 import MySkills from "../Home Page/MySkills.js"
-import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
-import { Menu, Switch, Layout } from 'antd';
+// import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
+// import { Menu, Switch, Layout } from 'antd';
 import MyLayout from "../Home Page/MyLayout";
 import MyProjects from "../Home Page/MyProjects";
 import ContactMe from "../Home Page/ContactMe";

@@ -1,4 +1,5 @@
-import { Layout, Row, Col, Button, Form, Input, InputNumber } from 'antd'
+// import { Layout, Row, Col, Button, Form, Input, InputNumber } from 'antd';
+import { Layout, Row, Col, Button, Form, Input } from 'antd';
 import { Content } from 'antd/lib/layout/layout'
 import React from 'react'
 

@@ -40,7 +40,6 @@ function App() {
       </Navbar> */}
 
       {/* <Coding /> */}
-
       <Routes>
         <Route path="coding_page" element={<Coding />} />
         <Route path="Portfolio_Website" element={<HomePage />} />
