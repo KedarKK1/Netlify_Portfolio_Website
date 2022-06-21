@@ -1,4 +1,4 @@
-import { Col, Layout, Row, Card, Input, Button } from 'antd';
+import { Col, Layout, Row, Card, Input, Button, Modal, Form } from 'antd';
 import { Content } from 'antd/lib/layout/layout';
 import React, { useState } from 'react';
 import FooterHeader from '../../components/Layout/FooterHeader';
@@ -7,10 +7,11 @@ import "./FunPage.css";
 
 // import firebase from '../../firebase';
 import { db } from "../../firebase";
-import { addDoc, collection, getDocs, deleteDoc, doc } from "firebase/firestore"
+import { addDoc, collection, getDocs, deleteDoc, doc, updateDoc  } from "firebase/firestore"
 import { useEffect } from 'react';
 // import firebase from "firebase/compat/app";
 // require('firebase/database');
+// import firestore from "firebase/compat/firestore";
 
 const FunPage = () => {
 
@@ -52,7 +53,31 @@ const FunPage = () => {
 
     const [setImg, setSetImg] = useState([]);
     const [loading, setLoading] = useState(false);
+    const [visible, setVisible] = useState(false);
+    const [modalText, setModalText] = useState(['id remains same']);
+    const showModal = () => {
+        setVisible(true);
+    }
+    // const handleOk = () => {
+    //     setModalText('The modal will be closed after two seconds');
+    //     setLoading(true);
+    //     setTimeout(() => {
+    //       setVisible(false);
+    //       setLoading(false);
+    //     }, 2000);
+    // }
+    const handleCancel = () => {
+        // console.log('Clicked cancel button');
+        setVisible(false);
+    };
+    const onFinish = (values) => {
+        // console.log('Success:', values);
+    };
+    const onFinishFailed = (errorInfo) => {
+    // console.log('Failed:', errorInfo);
+    };
     
+
 
     // const createMeme = async () =>
     // {
@@ -86,17 +111,28 @@ const FunPage = () => {
     //     })
     // }
 
-
-    const memeColletionRef = collection( db, "Image_URL's");
+    // const memeColletionRef = collection( db, "Image_URL's");
+    const memeColletionRef = collection(db,"Image_URL's", )
     const [writeMemeUrl, setwriteMemeUrl] = useState("");
-    const [writeMemeId, setWriteMemeId] = useState(15);
+    let noOfCards = 0
     const createMeme = async () => {
-        await addDoc(memeColletionRef, {imgUrl: writeMemeUrl, id: writeMemeId})
+        // setCreateMemeId(noOfCards)
+        // console.log(noOfCards)
+        await addDoc(memeColletionRef, {imgUrl: writeMemeUrl, id: noOfCards, })
         window.location.reload();
+        // console.log(createMemeId)
     }
     const deleteMeme = async (id) => {
         const userDoc = doc(db, "Image_URL's", id);
         await deleteDoc(userDoc);
+        window.location.reload();
+    }
+    const updateMeme = async (id) => {
+        const url = doc(db, "Image_URL's", id);
+        console.log(url);
+        await updateDoc(url, {
+            imgUrl: writeMemeUrl //this is value set in firebase database
+        })
         window.location.reload();
     }
 
@@ -126,7 +162,6 @@ const FunPage = () => {
         }
         getMemes();
 
-
     }, [])
     
 
@@ -148,20 +183,14 @@ const FunPage = () => {
                     </h3>
                     <Row>
                         <Col className="my-3" xxl={1} xl={1} lg={1} xs={2} md={2} sm={2} />
-                        <Col className="my-3" xxl={6} xl={6} lg={6} xs={20} md={20} sm={20} >
+                        <Col className="my-3" xxl={16} xl={16} lg={16} xs={20} md={20} sm={20} >
                             <Input type="text" placeholder="Enter Url" onChange={(event)=>{setwriteMemeUrl(event.target.value)}} />
                         </Col>
                         <Col className="my-3" xxl={0} xl={0} lg={0} xs={2} md={2} sm={2} />
                         <Col className="my-3" xxl={0} xl={0} lg={0} xs={2} md={2} sm={2} />
                         <Col className="my-3" xxl={6} xl={6} lg={6} xs={20} md={20} sm={20} >
-                            <Input type="number" placeholder="Enter Id" onChange={(event)=>{setWriteMemeId(event.target.value)}} />
-                        </Col>
-                        <Col className="my-3" xxl={0} xl={0} lg={0} xs={2} md={2} sm={2} />
-                        <Col className="my-3" xxl={6} xl={6} lg={6} xs={20} md={20} sm={20} >
                             <Button type="primary" onClick={createMeme}>Create Meme</Button>
                         </Col>
-                        <Col className="my-3" xxl={0} xl={0} lg={0} xs={2} md={2} sm={2} />
-
                         <Col className="my-3" xxl={1} xl={1} lg={1} xs={2} md={2} sm={2} />
                     </Row>
                     <Row>
@@ -180,14 +209,52 @@ const FunPage = () => {
                         })} */}
                         {setImg.map((imgSrc)=>{
                             return<>
-                                <Col className="my-3" xxl={1} xl={1} lg={1} xs={2} md={2} sm={2} />
-                                <Col className="my-3" xxl={6} xl={6} lg={6} xs={20} md={20} sm={20} >
+                                <Col className="my-3" xxl={1} xl={1} lg={1} md={1} sm={1} xs={2} />
+                                <Col className="my-3" xxl={6} xl={6} lg={6} md={10} sm={10} xs={20} >
                                     <Card>
+                                        <p style={{ display: 'none'}}> {noOfCards++}</p>
                                         <img key="{imgSrc.id}" src={imgSrc.imgUrl} className="memeImg" alt={imgSrc.id} />
+                                        <Button type="primary" block style={{marginTop:"10px"}} onClick={showModal}>Edit</Button>
+                                        <Modal
+                                            title="Title"
+                                            visible={visible}
+                                            onOk={()=>{updateMeme(imgSrc.id)}}
+                                            confirmLoading={loading}
+                                            onCancel={handleCancel}
+                                        >
+                                            <p>{modalText}</p>
+                                            <Form initialValues={{"ImageUrl": imgSrc.imgUrl }} onFinish={onFinish} onFinishFailed={onFinishFailed} autoComplete="off" >
+                                            <Form.Item
+                                                label="ImageUrl"
+                                                name="ImageUrl"
+                                                rules={[
+                                                {
+                                                    required: true,
+                                                    message: 'Please input your ImageUrl!',
+                                                },
+                                                ]}
+                                            >
+                                                <Input onChange={(event)=>{setwriteMemeUrl(event.target.value)}} />
+                                            </Form.Item>
+
+                                            {/* <Form.Item
+                                                label="Id"
+                                                name="id"
+                                                rules={[
+                                                    {
+                                                        required: true,
+                                                        message: 'Please input your Id!',
+                                                    },
+                                                ]}
+                                            >
+                                                <Input.Password />
+                                            </Form.Item> */}
+                                            </Form>
+                                        </Modal>
                                         <Button type="danger" block style={{marginTop:"10px"}} onClick={()=>{deleteMeme(imgSrc.id)}} >Delete</Button>
                                     </Card>
                                 </Col>
-                                <Col className="my-3" xxl={1} xl={1} lg={1} xs={2} md={2} sm={2} />
+                                <Col className="my-3" xxl={1} xl={1} lg={1} md={1} sm={1} xs={2} />
                             </>
                         })}
                         {}

@@ -41,75 +41,75 @@ const HomePage = () => {
 
     const { Header, Footer, Sider, Content } = Layout;
 
-    const items = [
-    {
-        label: 'Navigation One',
-        key: 'mail',
-        icon: <MailOutlined />,
-    },
-    {
-        label: 'Navigation Two',
-        key: 'app',
-        icon: <AppstoreOutlined />,
-        disabled: true,
-    },
-    {
-        label: 'Navigation Three - Submenu',
-        key: 'SubMenu',
-        icon: <SettingOutlined />,
-        style: {marginLeft: 'auto' },
-        children: [
-        {
-            type: 'group',
-            label: 'Item 1',
-            children: [
-            {
-                label: 'Option 1',
-                key: 'setting:1',
-            },
-            {
-                label: 'Option 2',
-                key: 'setting:2',
-            },
-            ],
-        },
-        {
-            type: 'group',
-            label: 'Item 2',
-            children: [
-            {
-                label: 'Option 3',
-                key: 'setting:3',
-            },
-            {
-                label: 'Option 4',
-                key: 'setting:4',
-            },
-            ],
-        },
-        ],
-    },
-    {
-        label: (
-        <a href="https://ant.design" target="_blank" rel="noopener noreferrer">
-            Navigation Four - Link
-        </a>
-        ),
-        key: 'alipay',
-    },
-    {
-        label: (
-        <Switch
-            checked={theme === 'dark'}
-            onChange={changeTheme}
-            checkedChildren="Dark"
-            unCheckedChildren="Light"
-        />
+    // const items = [
+    // {
+    //     label: 'Navigation One',
+    //     key: 'mail',
+    //     icon: <MailOutlined />,
+    // },
+    // {
+    //     label: 'Navigation Two',
+    //     key: 'app',
+    //     icon: <AppstoreOutlined />,
+    //     disabled: true,
+    // },
+    // {
+    //     label: 'Navigation Three - Submenu',
+    //     key: 'SubMenu',
+    //     icon: <SettingOutlined />,
+    //     style: {marginLeft: 'auto' },
+    //     children: [
+    //     {
+    //         type: 'group',
+    //         label: 'Item 1',
+    //         children: [
+    //         {
+    //             label: 'Option 1',
+    //             key: 'setting:1',
+    //         },
+    //         {
+    //             label: 'Option 2',
+    //             key: 'setting:2',
+    //         },
+    //         ],
+    //     },
+    //     {
+    //         type: 'group',
+    //         label: 'Item 2',
+    //         children: [
+    //         {
+    //             label: 'Option 3',
+    //             key: 'setting:3',
+    //         },
+    //         {
+    //             label: 'Option 4',
+    //             key: 'setting:4',
+    //         },
+    //         ],
+    //     },
+    //     ],
+    // },
+    // {
+    //     label: (
+    //     <a href="https://ant.design" target="_blank" rel="noopener noreferrer">
+    //         Navigation Four - Link
+    //     </a>
+    //     ),
+    //     key: 'alipay',
+    // },
+    // {
+    //     label: (
+    //     <Switch
+    //         checked={theme === 'dark'}
+    //         onChange={changeTheme}
+    //         checkedChildren="Dark"
+    //         unCheckedChildren="Light"
+    //     />
     
-        ),
-        key: 'theme',
-    },
-    ];
+    //     ),
+    //     key: 'theme',
+    // },
+    // ];
   
   return (
     <div>

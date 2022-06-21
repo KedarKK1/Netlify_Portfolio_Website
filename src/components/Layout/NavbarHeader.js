@@ -55,7 +55,7 @@ const NavbarHeader = () => {
                 float: 'right',
                 textAlign: 'right',
                 border: 'none',
-                width: '50%',
+                width: '60%',
               }}>
 
                 <Menu.Item key={'skills'} ><a href="/Portfolio_Website/#skills"> My Skills</a></Menu.Item> 
