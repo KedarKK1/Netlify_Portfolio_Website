@@ -1,57 +1,66 @@
-import React from 'react';
-import './LandingPage.css';
+import { Button, Col, Layout, Row } from 'antd'
+import { Content } from 'antd/lib/layout/layout'
+import React from 'react'
+import FooterHeader from '../Layout/FooterHeader'
+import NavbarHeader from '../Layout/NavbarHeader'
+import './LandingPage.css'
+import myGif from '../../images/myGif.gif'
+// import { ExportOutlined } from '@ant-design/icons'
+import Aos from 'aos';
+
 
 const LandingPage = () => {
 
-    const colors = ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36"];
-    const numBalls = 40;
-    const balls=[];
+    const myInterest = [
+        "Student",
+        "Full Stack Developer",
+        "Blockchain enthusiast",
+    ]
 
-    for(let i = 0; i < numBalls; i++)
-    {
-        let ball = document.createElement("div")
-        ball.classList.add("ball");
-        ball.style.background = colors[ Math.floor(Math.random() * colors.length) ]
-        ball.style.left = `${Math.floor(Math.random() * 100)}vw`
-        ball.style.top = `${Math.floor(Math.random() * 100)}vh`
-        ball.style.transform = `scale${(Math.random()*2)}`
-        ball.style.width = `${Math.random()*2}em`  
-        ball.style.height = ball.style.width
-
-        balls.push(ball)
-        document.body.append(ball)
-    }
-
-    // Keyframes
-    balls.forEach( (elemen, i, ra) => {
-
-        let to = {
-            x : Math.random() * ( i % 2 == 0 ? -11 : 11 ),
-            y : Math.random() * 5
-        }
-
-        let anim = elemen.animate(
-            [
-                { transform: 'translate(0,0)'},
-                { transform: `translate(${to.x}rem, ${to.y}rem)`}
-            ],
-            {
-                duration : (Math.random() + 1) * 2000,
-                direction : 'alternate',
-                fill : "both",
-                iterations : Infinity,
-                easing : 'ease-in-out'
-
-            }
-        )
-    } )
-
+    Aos.init({
+        duration: 3000,
+    });
 
   return (
     <div>
-        <section className="myCard">
-            Hello World
-        </section>
+        <NavbarHeader />
+
+        <div className="main-content">
+            <Layout >
+                <Content>
+                    <Row className="myRow2">
+                        <Col xxl={1} xl={1} lg={1} xs={1} md={1} sm={1} />
+
+                        <Col xxl={9} xl={9} lg={9} xs={22} md={22} sm={22} >
+                            <img src={myGif} data-aos="fade-right" data-aos-delay="500" alt="myGif" className='myGif' />
+                        </Col>
+
+                        <Col xxl={1} xl={1} lg={1} xs={1} md={1} sm={1} />
+
+                        <Col xxl={0} xl={0} lg={0} xs={1} md={1} sm={1} />
+
+                        <Col xxl={12} xl={12} lg={12} xs={22} md={22} sm={22} >
+                            <div data-aos="zoom-in-left" data-aos-delay="2500" >
+                                <h3>Welcome guys,</h3>
+                                <div><h1>I'm <b> Kedar Koshti</b></h1> </div>
+                                <h5>I'm a <b>{myInterest.map((interest) => interest + " | ")}</b> </h5>
+                           </div>
+
+                           <div>
+                                
+                                <Button type="primary" shape="round" size="large" ><a href="https://kedarkk1.github.io/Portfolio_Website/"  > Go to my Portfolio Website</a></Button>
+                           </div>
+
+                        </Col>
+
+                        <Col xxl={1} xl={1} lg={1} xs={1} md={1} sm={1} />
+
+                    </Row>
+                </Content>
+            </Layout>
+        </div>
+
+        <FooterHeader className="mFooter" />
     </div>
   )
 }

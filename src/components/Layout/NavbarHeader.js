@@ -60,7 +60,7 @@ const NavbarHeader = () => {
 
                 <Menu.Item key={'skills'} ><a href="/Portfolio_Website/#skills"> My Skills</a></Menu.Item> 
                 <Menu.Item key={'projects'} ><a href="/Portfolio_Website/#projects">My Projects</a></Menu.Item> 
-                <Menu.Item key={'resume'} ><a href="https://drive.google.com/file/d/1zNywBJNqg6_v-h96pV4tcx5_WNXy9e2E/view?usp=sharing">My Resumé</a></Menu.Item> 
+                <Menu.Item key={'resume'} ><a href="https://drive.google.com/file/d/1irKYMaF0unbquoIK_J5jkHi5qiOM2MfJ/view?usp=sharing">My Resumé</a></Menu.Item> 
                 <Menu.Item key={'contact'} ><a href="/Portfolio_Website/#contact">Contact Me</a></Menu.Item> 
                 <Menu.Item key={'Funpage'} ><Link to="/Portfolio_Website/Fun_Page">Fun Page</Link></Menu.Item> 
 

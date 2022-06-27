@@ -1,30 +1,18 @@
-body
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow: hidden;
-    /* background-image: linear-gradient(to top right, #152238 0%, #152238 100%); */
-    background-image: linear-gradient(to top right, #152238 0%, #1A1A40 100%);
-    color: white;
-    height:100vh;
-    width:100vw;
-    /* filter: blur(5px); */
+.main-content{
+    /* min-height:70vh; */
+    min-height: calc(100vh - 135px);
 }
 
-.ball
-{
-    position: relative;
-    border-radius: 100%;
-    opacity: 0.7;
+.myRow2{
+    margin: 5vmax; 
 }
 
-.myCard
-{
-    background-color: pink;
-    border: 2px solid white;
+
+span {
     display: flex;
-    align-items: center;
-    justify-content: center;
+  }
+  
 
+.myGif{
+    width:100%;
 }
