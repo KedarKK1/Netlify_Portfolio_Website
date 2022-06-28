@@ -4,7 +4,7 @@
 https://kedarkk1.github.io/Portfolio_Website/
 
 ## Collaborations for future improvements are always welcomed
-You can see future scope [here](#Features)
+You can see Features & Future Scope [here](#Features)
 
 ## For deployment purposes
 ``` sh
