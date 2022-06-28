@@ -1,9 +1,9 @@
-## Portfolio Website Link -
+# Portfolio Website Link -
 
 - My Website Link -
 https://kedarkk1.github.io/Portfolio_Website/
 
-# Collaborations for future improvements are always welcomed
+## Collaborations for future improvements are always welcomed
 You can see future scope [here](#Features)
 
 ## For deployment purposes
@@ -15,7 +15,7 @@ Or
 ```sh
 yarn install
 ```
-# Portfolio_Website
+### Portfolio_Website
 My Portfolio Website Deployed 
 
 # Features
@@ -31,7 +31,7 @@ My Portfolio Website Deployed
 - CRUD for everyone
 - apply ML to fun page to automatically generate tags for memes
 
-# Getting Started with the Project
+## Getting Started with the Project
 ``` sh
 git clone https://github.com/KedarKK1/Portfolio_Website.git
 ``` 
