@@ -16,6 +16,7 @@ const MyProjects = () => {
                         // extra={<a href="#">More</a>}
                         style={{
                             width: '100%',
+                            marginTop: 15,
                         }}
                         >
                         <p><b>Events - </b>PISB(IEEE) - Credenz & RC(Reverse Coding)</p>
@@ -32,6 +33,7 @@ const MyProjects = () => {
                         // extra={<a href="#">More</a>}
                         style={{
                             width: '100%',
+                            marginTop: 15,
                         }}
                         >
                         <p><b>Features - </b>CRUD(Products, Orders) using RESTful API, Authentication with , Authorization, Page-Routing, Pagination, Error-handeling </p>
@@ -48,6 +50,7 @@ const MyProjects = () => {
                         // extra={<a href="#">More</a>}
                         style={{
                             width: '100%',
+                            marginTop: 15,
                         }}
                         >
                         <p><b>Features - </b>Static Responsive webpages creation, Backend RESTful API, Sort, Integration </p>

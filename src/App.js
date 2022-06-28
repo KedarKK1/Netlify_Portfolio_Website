@@ -4,9 +4,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Coding from './components/Coding/Coding';
 import { Routes, Route } from "react-router-dom";
 import HomePage from './pages/Home/HomePage';
-// import FunPage from './pages/Fun/FunPage';
-// import LandingPage3 from './components/LandingPage/LandingPage3';
+import FunPage from './pages/Fun/FunPage';
 import LandingPage from './components/LandingPage/LandingPage.js';
+// import LandingPage3 from './components/LandingPage/LandingPage3';
 // import AOS from 'aos';
 // import { useEffect } from 'react';
 // import LandingPage from './components/LandingPage/LandingPage';
@@ -52,8 +52,9 @@ function App() {
       {/* <Coding /> */}
       <Routes>
         <Route path="coding_page" element={<Coding />} />
-        <Route path="Portfolio_Website" element={<HomePage />} />
-        <Route path="" element={<LandingPage />} />
+        <Route path="Portfolio_Website/Home_Page" element={<HomePage />} />
+        <Route path="Portfolio_Website/Fun_Page" element={<FunPage />} />
+        <Route path="Portfolio_Website" element={<LandingPage />} />
         {/* <Route path="/codeEditor" element={<CodeEditor />} /> */}
       </Routes>
 
