@@ -1,7 +1,10 @@
-## Portfolio Website Link -
+# Portfolio Website Link -
 
 - My Website Link -
 https://kedarkk1.github.io/Portfolio_Website/
+
+## Collaborations for future improvements are always welcomed
+You can see future scope [here](#Features)
 
 ## For deployment purposes
 ``` sh
@@ -12,14 +15,23 @@ Or
 ```sh
 yarn install
 ```
-# Portfolio_Website
+### Portfolio_Website
 My Portfolio Website Deployed 
 
 # Features
 - Project was made in React and Ant Design
 - Site is Responsive, and mobile-friendly
+- Animations are added to landing page and portfolio website (AOS library)
+- Dynamic titles to each webpage and seo-friendly (react-helmet) 
 
-# Getting Started with the Project
+# Future Scope
+- Infinite scroll on funpage
+- Give tags to memes
+- Sort according to tags (use ML to get closest tag eg. Elon Musk memes, etc)
+- CRUD for everyone
+- apply ML to fun page to automatically generate tags for memes
+
+## Getting Started with the Project
 ``` sh
 git clone https://github.com/KedarKK1/Portfolio_Website.git
 ``` 
