@@ -6,6 +6,7 @@ import { Routes, Route } from "react-router-dom";
 import HomePage from './pages/Home/HomePage';
 import FunPage from './pages/Fun/FunPage';
 import LandingPage from './pages/LandingPage/LandingPage.js';
+import Error404 from './components/Error Page/Error404';
 // import { Helmet } from 'react-helmet';
 // import LandingPage3 from './components/LandingPage/LandingPage3';
 // import AOS from 'aos';
@@ -63,6 +64,8 @@ function App() {
         <Route path="Portfolio_Website/Home_Page" element={<HomePage />} />
         <Route path="Portfolio_Website/Fun_Page" element={<FunPage />} />
         <Route path="Portfolio_Website" element={<LandingPage />} />
+        {/* for 404 error */}
+        <Route path="*" element={<Error404 />} />
         {/* <Route path="/codeEditor" element={<CodeEditor />} /> */}
       </Routes>
 
