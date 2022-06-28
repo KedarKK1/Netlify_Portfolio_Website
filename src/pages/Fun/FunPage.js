@@ -8,6 +8,7 @@ import "./FunPage.css";
 import { db } from "../../firebase";
 import { addDoc, collection, getDocs, deleteDoc, doc, updateDoc  } from "firebase/firestore"
 import { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 // import firebase from "firebase/compat/app";
 // require('firebase/database');
 // import firestore from "firebase/compat/firestore";
@@ -145,6 +146,11 @@ const FunPage = () => {
 
   return (
     <>
+        <Helmet>
+            <title>Fun Page</title>
+            <meta name="fun page" content="fun page share memes"  />
+        </Helmet>
+
         <NavbarHeader />
             <Layout>
                 <Content>

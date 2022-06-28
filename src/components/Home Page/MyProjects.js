@@ -1,12 +1,22 @@
 import { Col, Layout, Row, Card } from 'antd'
 import { Content } from 'antd/lib/layout/layout'
-import React from 'react'
+import React, { useEffect } from 'react'
+import Aos from 'aos';
+import "aos/dist/aos.css";
 
 const MyProjects = () => {
+
+    useEffect(() => {
+        Aos.init({
+            duration: 500,
+        });
+    
+    }, [])
+
   return (
     <>
     <Layout id="projects">
-        <Content style={{ marginTop: 15}}>
+        <Content style={{ marginTop: 15}} data-aos="fade-up" data-aos-anchor-placement="top-center">
             <h1> <b><u>My Projects</u></b> </h1>
             <Row>
                 <Col xxl={2} xl={2} lg={2} xs={2} md={2} sm={2} />

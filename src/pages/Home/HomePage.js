@@ -11,6 +11,7 @@ import MyLayout from "../../components/Home Page/MyLayout";
 import MySkills from "../../components/Home Page/MySkills"
 import MyProjects from "../../components/Home Page/MyProjects";
 import ContactMe from "../../components/Home Page/ContactMe";
+import { Helmet } from 'react-helmet';
 // const SubMenu = Menu.SubMenu;
 // const MenuItemGroup = Menu.ItemGroup;
 /*this is for importing dark theme of antd  */
@@ -115,6 +116,10 @@ const HomePage = () => {
   
   return (
     <div>
+        <Helmet>
+            <title>Portfolio Website</title>
+            <meta name="Portfolio" content="Fortfolio page website skills projects contact me about me fun page "  />
+        </Helmet>
         {/* <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" theme={theme} items={items} >
 
            <SubMenu style={{float: 'right'}} title={<span>Navigation Three - Submenu</span>}>

@@ -1,16 +1,26 @@
 import { Layout } from 'antd';
 import { Content } from 'antd/lib/layout/layout';
-import React from 'react';
+import React, { useEffect } from 'react';
 /*this is for importing dark theme of antd  */
 // import 'antd/dist/antd.dark.css';
+import Aos from 'aos';
+import "aos/dist/aos.css";
 
 const MySkills = () => {
+
+    useEffect(() => {
+        Aos.init({
+            duration: 500,
+        });
+    
+    }, [])
+
   return (
     <>
         <Layout id="skills" >
-            <Content style={{ marginTop: 15}}>
+            <Content style={{ marginTop: 15}} data-aos="zoom-in-down">
                 <h1> <b><u>My Skills</u></b> </h1>
-                <ul style={{ marginRight: 30, marginLeft: 30 }} align={'start'}>
+                <ul style={{ marginRight: 30, marginLeft: 30 }} align={'start'} >
                     <li>
                         {/* below align start is from antD, if not aligned right, then all text and badges will be at center */}
                         <h4>Languages - </h4>

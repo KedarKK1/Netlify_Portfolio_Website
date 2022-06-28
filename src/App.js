@@ -5,7 +5,8 @@ import Coding from './components/Coding/Coding';
 import { Routes, Route } from "react-router-dom";
 import HomePage from './pages/Home/HomePage';
 import FunPage from './pages/Fun/FunPage';
-import LandingPage from './components/LandingPage/LandingPage.js';
+import LandingPage from './pages/LandingPage/LandingPage.js';
+// import { Helmet } from 'react-helmet';
 // import LandingPage3 from './components/LandingPage/LandingPage3';
 // import AOS from 'aos';
 // import { useEffect } from 'react';
@@ -50,6 +51,13 @@ function App() {
       </Navbar> */}
 
       {/* <Coding /> */}
+
+{/* react helmet for seo */}
+      {/* <Helmet>
+        <title>my Title</title>
+        <meta name="This will be name in gsearch" content="This is what gonna show in google search" />
+      </Helmet> */}
+
       <Routes>
         <Route path="coding_page" element={<Coding />} />
         <Route path="Portfolio_Website/Home_Page" element={<HomePage />} />

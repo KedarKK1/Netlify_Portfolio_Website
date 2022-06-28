@@ -1,7 +1,9 @@
 // import { Layout, Row, Col, Button, Form, Input, InputNumber } from 'antd';
 import { Layout, Row, Col, Button, Form, Input } from 'antd';
 import { Content } from 'antd/lib/layout/layout'
-import React from 'react'
+import React, { useEffect } from 'react'
+import Aos from 'aos';
+import "aos/dist/aos.css";
 
 const ContactMe = () => {
 
@@ -9,10 +11,17 @@ const ContactMe = () => {
         alert("Submting 'Contact Me' is not done yet. Please try Gmail link or LinkedIn link on left/up.")
     }
 
+    useEffect(() => {
+        Aos.init({
+            duration: 500,
+        });
+    
+    }, [])
+
   return (
     <>
     <Layout id="contact">
-        <Content  style={{ marginTop: 15}}>
+        <Content  style={{ marginTop: 15}} data-aos="fade-up" data-aos-anchor-placement="top-bottom">
             <h1> <b><u>Contact Me</u></b> </h1>
             <Row style={{ marginTop: 15}}>
                 <Col xxl={2} xl={2} lg={2} xs={2} md={2} sm={2} />
