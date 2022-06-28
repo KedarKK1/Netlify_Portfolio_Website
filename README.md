@@ -3,6 +3,9 @@
 - My Website Link -
 https://kedarkk1.github.io/Portfolio_Website/
 
+# Collaborations for future improvements are always welcomed
+You can see future scope [here](#Features)
+
 ## For deployment purposes
 ``` sh
 npm run deploy
