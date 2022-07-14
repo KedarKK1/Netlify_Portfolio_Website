@@ -9,6 +9,7 @@ import { db } from "../../firebase";
 import { addDoc, collection, getDocs, deleteDoc, doc, updateDoc  } from "firebase/firestore"
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
+// import InfiniteScroll from 'react-infinite-scroll-component';
 // import firebase from "firebase/compat/app";
 // require('firebase/database');
 // import firestore from "firebase/compat/firestore";
@@ -86,6 +87,7 @@ const FunPage = () => {
     const memeColletionRef = collection(db,"Image_URL's", )
     const [writeMemeUrl, setwriteMemeUrl] = useState("");
     let noOfCards = 0
+    
     const createMeme = async () => {
         // setCreateMemeId(noOfCards)
         // console.log(noOfCards)
@@ -183,56 +185,65 @@ const FunPage = () => {
                                 <Col className="my-3" xxl={1} xl={1} lg={1} xs={2} md={2} sm={2} />
                             </>
                         })} */}
-                        {setImg.map((imgSrc)=>{
-                            return<>
-                                <Col className="my-3" xxl={1} xl={1} lg={1} md={1} sm={1} xs={2} />
-                                <Col className="my-3" xxl={6} xl={6} lg={6} md={10} sm={10} xs={20} >
-                                    <Card>
-                                        <p style={{ display: 'none'}}> {noOfCards++}</p>
-                                        <img key="{imgSrc.id}" src={imgSrc.imgUrl} className="memeImg" alt={imgSrc.id} />
-                                        <Button type="primary" block style={{marginTop:"10px"}} onClick={showModal}>Edit</Button>
-                                        <Modal
-                                            title="Title"
-                                            visible={visible}
-                                            onOk={()=>{updateMeme(imgSrc.id)}}
-                                            confirmLoading={loading}
-                                            onCancel={handleCancel}
-                                        >
-                                            <p>{modalText}</p>
-                                            <Form initialValues={{"ImageUrl": imgSrc.imgUrl }} onFinish={onFinish} onFinishFailed={onFinishFailed} autoComplete="off" >
-                                            <Form.Item
-                                                label="ImageUrl"
-                                                name="ImageUrl"
-                                                rules={[
-                                                {
-                                                    required: true,
-                                                    message: 'Please input your ImageUrl!',
-                                                },
-                                                ]}
+                        {/* <InfiniteScroll
+                            dataLength={setImg.length}
+                            next={fetchMoreData}
+                            hasMore={setImg.length !== state.tottalResult}
+                            loader={<h4>Loading...</h4>}
+                        > */}
+                            
+                            {setImg.map((imgSrc)=>{
+                                return<>
+                                    <Col className="my-3" xxl={1} xl={1} lg={1} md={1} sm={1} xs={2} />
+                                    <Col className="my-3" xxl={6} xl={6} lg={6} md={10} sm={10} xs={20} >
+                                        <Card>
+                                            <p style={{ display: 'none'}}> {noOfCards++}</p>
+                                            <img key="{imgSrc.id}" src={imgSrc.imgUrl} className="memeImg" alt={imgSrc.id} />
+                                            <Button type="primary" block style={{marginTop:"10px"}} onClick={showModal}>Edit</Button>
+                                            <Modal
+                                                title="Title"
+                                                visible={visible}
+                                                onOk={()=>{updateMeme(imgSrc.id)}}
+                                                confirmLoading={loading}
+                                                onCancel={handleCancel}
                                             >
-                                                <Input onChange={(event)=>{setwriteMemeUrl(event.target.value)}} />
-                                            </Form.Item>
-
-                                            {/* <Form.Item
-                                                label="Id"
-                                                name="id"
-                                                rules={[
+                                                <p>{modalText}</p>
+                                                <Form initialValues={{"ImageUrl": imgSrc.imgUrl }} onFinish={onFinish} onFinishFailed={onFinishFailed} autoComplete="off" >
+                                                <Form.Item
+                                                    label="ImageUrl"
+                                                    name="ImageUrl"
+                                                    rules={[
                                                     {
                                                         required: true,
-                                                        message: 'Please input your Id!',
+                                                        message: 'Please input your ImageUrl!',
                                                     },
-                                                ]}
-                                            >
-                                                <Input.Password />
-                                            </Form.Item> */}
-                                            </Form>
-                                        </Modal>
-                                        <Button type="danger" block style={{marginTop:"10px"}} onClick={()=>{deleteMeme(imgSrc.id)}} >Delete</Button>
-                                    </Card>
-                                </Col>
-                                <Col className="my-3" xxl={1} xl={1} lg={1} md={1} sm={1} xs={2} />
-                            </>
-                        })}
+                                                    ]}
+                                                >
+                                                    <Input onChange={(event)=>{setwriteMemeUrl(event.target.value)}} />
+                                                </Form.Item>
+
+                                                {/* <Form.Item
+                                                    label="Id"
+                                                    name="id"
+                                                    rules={[
+                                                        {
+                                                            required: true,
+                                                            message: 'Please input your Id!',
+                                                        },
+                                                    ]}
+                                                >
+                                                    <Input.Password />
+                                                </Form.Item> */}
+                                                </Form>
+                                            </Modal>
+                                            <Button type="danger" block style={{marginTop:"10px"}} onClick={()=>{deleteMeme(imgSrc.id)}} >Delete</Button>
+                                        </Card>
+                                    </Col>
+                                    <Col className="my-3" xxl={1} xl={1} lg={1} md={1} sm={1} xs={2} />
+                                </>
+                            })}
+
+                        {/* </InfiniteScroll> */}
                         {}
                     </Row>
                 </Content>
