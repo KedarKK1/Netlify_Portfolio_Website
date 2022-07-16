@@ -33,13 +33,13 @@ const MyLayout = () => {
                         <Col xxl={11} xl={11} lg={11} xs={22} md={22} sm={22} style={{ overflow: 'hidden' }}>
                             <div style={{ marginTop: '20px' }} data-aos="zoom-out">
                                 <Row justify="space-around" align="middle" >
-                                        <span data-aos="zoom-out-right" data-aos-delay="200"><h3>A</h3></span>
-                                        <span data-aos="zoom-out-right" data-aos-delay="400"><h3>r</h3></span>
-                                        <span data-aos="zoom-out-right" data-aos-delay="600"><h3>i</h3></span>
-                                        <span data-aos="zoom-out-right" data-aos-delay="800"><h3>g</h3></span>
-                                        <span data-aos="zoom-out-right" data-aos-delay="1000"><h3>a</h3></span>
+                                        <span data-aos="zoom-out-right" data-aos-delay="200"><h3>N</h3></span>
+                                        <span data-aos="zoom-out-right" data-aos-delay="400"><h3>a</h3></span>
+                                        <span data-aos="zoom-out-right" data-aos-delay="600"><h3>m</h3></span>
+                                        <span data-aos="zoom-out-right" data-aos-delay="800"><h3>a</h3></span>
+                                        <span data-aos="zoom-out-right" data-aos-delay="1000"><h3>s</h3></span>
                                         <span data-aos="zoom-out-right" data-aos-delay="1200"><h3>t</h3></span>
-                                        <span data-aos="zoom-out-right" data-aos-delay="1400"><h3>o</h3></span>
+                                        <span data-aos="zoom-out-right" data-aos-delay="1400"><h3>e</h3></span>
                                         <span data-aos="zoom-out-right" data-aos-delay="1600"><h3>!</h3></span>
                                         <span data-aos="zoom-out-right" data-aos-delay="1800"><img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="45px" height="45px" alt="hiImg" /></span>
                                 </Row>
@@ -53,7 +53,7 @@ const MyLayout = () => {
                                 </h3>
 
                                 <h5 style={{fontWeight: "300"}} data-aos="zoom-out" data-aos-delay="200" data-aos-once >
-                                    I'm second year Computer Engineering student at Pune Institute of Computer Technology, Pune. I am interested in Web development and blockchain. Currently exploring Full Stack Web Development and AWS. I love watching anime and sit-coms.
+                                    I'm Third year Computer Engineering student at Pune Institute of Computer Technology, Pune. I am interested in Web development and blockchain. Currently exploring AWS and cloud computing. I love watching anime and sit-coms.
                                 </h5>
                             </div>
                         </Col>
