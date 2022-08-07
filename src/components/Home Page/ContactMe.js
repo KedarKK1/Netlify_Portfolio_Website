@@ -21,7 +21,7 @@ const ContactMe = () => {
   return (
     <>
     <Layout id="contact">
-        <Content  style={{ marginTop: 15}} data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+        <Content style={{ marginTop: 15}} data-aos="fade-up" data-aos-anchor-placement="top-bottom">
             <h1> <b><u>Contact Me</u></b> </h1>
             <Row style={{ marginTop: 15}}>
                 <Col xxl={2} xl={2} lg={2} xs={2} md={2} sm={2} />

@@ -61,7 +61,7 @@ const LandingPage = () => {
                                 <div>
                                     
                                     {/* <Button type="primary" shape="round" size="large" ><a href="https://kedarkk1.github.io/Portfolio_Website/"  > Go to my Portfolio Website</a></Button> */}
-                                    <Button type="primary" shape="round" size="large" ><Link to="Home_Page"  > Go to my Portfolio Website</Link></Button>
+                                    <Button type="primary" shape="round" size="large" ><Link to="Homepage"  > Go to my Portfolio Website</Link></Button>
                                 </div>
 
                             </Col>

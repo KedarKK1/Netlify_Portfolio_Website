@@ -1,7 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
-import Coding from './components/Coding/Coding';
 import { Routes, Route } from "react-router-dom";
 import HomePage from './pages/Home/HomePage';
 import FunPage from './pages/Fun/FunPage';
@@ -15,9 +14,9 @@ import Error404 from './components/Error Page/Error404';
 // import CodeEditor from './components/Coding/CodeEditor';
 
 function App() {
-
+  
   // useEffect(() => {
-    
+
   //   AOS.init();
   //   AOS.refresh();
   // }, []);
@@ -53,17 +52,16 @@ function App() {
 
       {/* <Coding /> */}
 
-{/* react helmet for seo */}
+      {/* react helmet for seo */}
       {/* <Helmet>
         <title>my Title</title>
         <meta name="This will be name in gsearch" content="This is what gonna show in google search" />
       </Helmet> */}
 
       <Routes>
-        <Route path="coding_page" element={<Coding />} />
-        <Route path="Portfolio_Website/Home_Page" element={<HomePage />} />
-        <Route path="Portfolio_Website/Fun_Page" element={<FunPage />} />
-        <Route path="Portfolio_Website" element={<LandingPage />} />
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/Homepage" index element={<HomePage />} />
+        <Route path="/Funpage" element={<FunPage />} />
         {/* for 404 error */}
         <Route path="*" element={<Error404 />} />
         {/* <Route path="/codeEditor" element={<CodeEditor />} /> */}

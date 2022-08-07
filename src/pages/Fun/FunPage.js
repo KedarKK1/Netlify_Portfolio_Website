@@ -26,7 +26,8 @@ const FunPage = () => {
     const [setImg, setSetImg] = useState([]);
     const [loading, setLoading] = useState(false);
     const [visible, setVisible] = useState(false);
-    const [modalText, setModalText] = useState(['id remains same']);
+    // const [modalText, setModalText] = useState(['id remains same']);
+    const modalText = ['id remains same'];
     const showModal = () => {
         setVisible(true);
     }
