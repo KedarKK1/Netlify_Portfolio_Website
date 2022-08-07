@@ -6,7 +6,7 @@ import NavbarHeader from '../../components/Layout/NavbarHeader';
 import "./FunPage.css";
 // import firebase from '../../firebase';
 import { db } from "../../firebase";
-import { addDoc, collection, getDocs, deleteDoc, doc, updateDoc  } from "firebase/firestore"
+import { addDoc, collection, getDocs, deleteDoc, doc, updateDoc } from "firebase/firestore"
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 // import InfiniteScroll from 'react-infinite-scroll-component';
@@ -16,12 +16,10 @@ import { Helmet } from 'react-helmet';
 
 const FunPage = () => {
 
-
     // let myMemeImgSrc = [
     //     "https://preview.redd.it/x7kxi9gtuuw71.jpg?auto=webp&s=f4659fbc4bb621034c3940e878be3cfb0fbbb61d",
     //     "https://i.chzbgr.com/thumb800/16763397/h0B023285/funny-memes-programming-memes-developers-coding-memes-coder-coding-nerdy-memes-memes-java-memes",
     // ]
-
 
     const [setImg, setSetImg] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -47,10 +45,8 @@ const FunPage = () => {
         // console.log('Success:', values);
     };
     const onFinishFailed = (errorInfo) => {
-    // console.log('Failed:', errorInfo);
+        // console.log('Failed:', errorInfo);
     };
-    
-
 
     // const createMeme = async () =>
     // {
@@ -73,7 +69,6 @@ const FunPage = () => {
     //     })
     // }
 
-
     // function getImages2()
     // {
     //     setLoading(true);
@@ -85,14 +80,14 @@ const FunPage = () => {
     // }
 
     // const memeColletionRef = collection( db, "Image_URL's");
-    const memeColletionRef = collection(db,"Image_URL's", )
+    const memeColletionRef = collection(db, "Image_URL's",)
     const [writeMemeUrl, setwriteMemeUrl] = useState("");
     let noOfCards = 0
-    
+
     const createMeme = async () => {
         // setCreateMemeId(noOfCards)
         // console.log(noOfCards)
-        await addDoc(memeColletionRef, {imgUrl: writeMemeUrl, id: noOfCards, })
+        await addDoc(memeColletionRef, { imgUrl: writeMemeUrl, id: noOfCards, })
         window.location.reload();
         // console.log(createMemeId)
     }
@@ -112,58 +107,55 @@ const FunPage = () => {
 
     useEffect(() => {
         // getImages();
-
-
         // alternate method to get memes below
-        const getMemes = async() => {
+        const getMemes = async () => {
             setLoading(true);
 
-        //     db.collection("Image_URL's").get()
-        // .then(function(querySnapshot) {
-        //     querySnapshot.forEach(function(doc) {
-        //         // doc.data() is never undefined for query doc snapshots
-        //         console.log(doc.id, " => ", doc.data());
-        //     });
-        // })
-        // .catch(function(error) {
-        //     console.log("Error getting documents: ", error);
-        // });
+            //     db.collection("Image_URL's").get()
+            // .then(function(querySnapshot) {
+            //     querySnapshot.forEach(function(doc) {
+            //         // doc.data() is never undefined for query doc snapshots
+            //         console.log(doc.id, " => ", doc.data());
+            //     });
+            // })
+            // .catch(function(error) {
+            //     console.log("Error getting documents: ", error);
+            // });
 
-            const data = await getDocs(memeColletionRef);
+            const data = await getDocs(collection(db, "Image_URL's",));
             // console.log(data);
-            setSetImg(data.docs.map((doc) =>( {...doc.data(), id: doc.id }) ));
+            setSetImg(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
             setLoading(false);
         }
         getMemes();
 
     }, [])
-    
+
 
     // const myRef = firebase.firestore().collection("Image_URL's");
     // console.log(myRef);
 
-    if(loading)
-    {
+    if (loading) {
         return <h1>Loading...</h1>
     }
 
-  return (
-    <>
-        <Helmet>
-            <title>Fun Page</title>
-            <meta name="fun page" content="fun page share memes"  />
-        </Helmet>
+    return (
+        <>
+            <Helmet>
+                <title>Fun Page</title>
+                <meta name="fun page" content="fun page share memes" />
+            </Helmet>
 
-        <NavbarHeader />
+            <NavbarHeader />
             <Layout>
                 <Content>
-                    <h3 style={{ marginTop: 15}}>
+                    <h3 style={{ marginTop: 15 }}>
                         <u>Welcome to my Meme Page</u>
                     </h3>
                     <Row>
                         <Col className="my-3" xxl={1} xl={1} lg={1} xs={2} md={2} sm={2} />
                         <Col className="my-3" xxl={16} xl={16} lg={16} xs={20} md={20} sm={20} >
-                            <Input type="text" placeholder="Enter Url" onChange={(event)=>{setwriteMemeUrl(event.target.value)}} />
+                            <Input type="text" placeholder="Enter Url" onChange={(event) => { setwriteMemeUrl(event.target.value) }} />
                         </Col>
                         <Col className="my-3" xxl={0} xl={0} lg={0} xs={2} md={2} sm={2} />
                         <Col className="my-3" xxl={0} xl={0} lg={0} xs={2} md={2} sm={2} />
@@ -192,35 +184,35 @@ const FunPage = () => {
                             hasMore={setImg.length !== state.tottalResult}
                             loader={<h4>Loading...</h4>}
                         > */}
-                            
-                            {setImg.map((imgSrc)=>{
-                                return<>
-                                    <Col className="my-3" xxl={1} xl={1} lg={1} md={1} sm={1} xs={2} />
-                                    <Col className="my-3" xxl={6} xl={6} lg={6} md={10} sm={10} xs={20} >
-                                        <Card>
-                                            <p style={{ display: 'none'}}> {noOfCards++}</p>
-                                            <img key="{imgSrc.id}" src={imgSrc.imgUrl} className="memeImg" alt={imgSrc.id} />
-                                            <Button type="primary" block style={{marginTop:"10px"}} onClick={showModal}>Edit</Button>
-                                            <Modal
-                                                title="Title"
-                                                visible={visible}
-                                                onOk={()=>{updateMeme(imgSrc.id)}}
-                                                confirmLoading={loading}
-                                                onCancel={handleCancel}
-                                            >
-                                                <p>{modalText}</p>
-                                                <Form initialValues={{"ImageUrl": imgSrc.imgUrl }} onFinish={onFinish} onFinishFailed={onFinishFailed} autoComplete="off" >
+
+                        {setImg.map((imgSrc) => {
+                            return <>
+                                <Col className="my-3" xxl={1} xl={1} lg={1} md={1} sm={1} xs={2} />
+                                <Col className="my-3" xxl={6} xl={6} lg={6} md={10} sm={10} xs={20} >
+                                    <Card>
+                                        <p style={{ display: 'none' }}> {noOfCards++}</p>
+                                        <img key="{imgSrc.id}" src={imgSrc.imgUrl} className="memeImg" alt={imgSrc.id} />
+                                        <Button type="primary" block style={{ marginTop: "10px" }} onClick={showModal}>Edit</Button>
+                                        <Modal
+                                            title="Title"
+                                            visible={visible}
+                                            onOk={() => { updateMeme(imgSrc.id) }}
+                                            confirmLoading={loading}
+                                            onCancel={handleCancel}
+                                        >
+                                            <p>{modalText}</p>
+                                            <Form initialValues={{ "ImageUrl": imgSrc.imgUrl }} onFinish={onFinish} onFinishFailed={onFinishFailed} autoComplete="off" >
                                                 <Form.Item
                                                     label="ImageUrl"
                                                     name="ImageUrl"
                                                     rules={[
-                                                    {
-                                                        required: true,
-                                                        message: 'Please input your ImageUrl!',
-                                                    },
+                                                        {
+                                                            required: true,
+                                                            message: 'Please input your ImageUrl!',
+                                                        },
                                                     ]}
                                                 >
-                                                    <Input onChange={(event)=>{setwriteMemeUrl(event.target.value)}} />
+                                                    <Input onChange={(event) => { setwriteMemeUrl(event.target.value) }} />
                                                 </Form.Item>
 
                                                 {/* <Form.Item
@@ -235,24 +227,24 @@ const FunPage = () => {
                                                 >
                                                     <Input.Password />
                                                 </Form.Item> */}
-                                                </Form>
-                                            </Modal>
-                                            <Button type="danger" block style={{marginTop:"10px"}} onClick={()=>{deleteMeme(imgSrc.id)}} >Delete</Button>
-                                        </Card>
-                                    </Col>
-                                    <Col className="my-3" xxl={1} xl={1} lg={1} md={1} sm={1} xs={2} />
-                                </>
-                            })}
+                                            </Form>
+                                        </Modal>
+                                        <Button type="danger" block style={{ marginTop: "10px" }} onClick={() => { deleteMeme(imgSrc.id) }} >Delete</Button>
+                                    </Card>
+                                </Col>
+                                <Col className="my-3" xxl={1} xl={1} lg={1} md={1} sm={1} xs={2} />
+                            </>
+                        })}
 
                         {/* </InfiniteScroll> */}
-                        {}
+                        { }
                     </Row>
                 </Content>
             </Layout>
 
-        <FooterHeader />
-    </>
-  )
+            <FooterHeader />
+        </>
+    )
 }
 
 export default FunPage
