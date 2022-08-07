@@ -12,6 +12,7 @@ import MySkills from "../../components/Home Page/MySkills"
 import MyProjects from "../../components/Home Page/MyProjects";
 import ContactMe from "../../components/Home Page/ContactMe";
 import { Helmet } from 'react-helmet';
+import VisitorsCount from '../../components/Home Page/VisitorsCount';
 // const SubMenu = Menu.SubMenu;
 // const MenuItemGroup = Menu.ItemGroup;
 /*this is for importing dark theme of antd  */
@@ -158,6 +159,7 @@ const HomePage = () => {
             <MySkills id="skills" />
             <MyProjects />
             <ContactMe />
+            <VisitorsCount />
         </div>
 
 
