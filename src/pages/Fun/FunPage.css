@@ -12,6 +12,13 @@
     border-color: #6272a4; */
 }
 
+.myLoader{
+  height:100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media screen and (max-width: 420px) {
   .memeImg {
     width: 100%;

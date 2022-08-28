@@ -1,4 +1,4 @@
-import { Col, Layout, Row, Card, Input, Button, Modal, Form } from 'antd';
+import { Col, Layout, Row, Card, Input, Button, Modal, Form, Spin } from 'antd';
 import { Content } from 'antd/lib/layout/layout';
 import React, { useState } from 'react';
 import FooterHeader from '../../components/Layout/FooterHeader';
@@ -122,7 +122,9 @@ const FunPage = () => {
             //     console.log("Error getting documents: ", error);
             // });
 
-            const data = await getDocs(collection(db, "Image_URL's",));
+            const data = await getDocs(collection(db, "Image_URL's",)).catch(function(error) {
+                    console.log("Error getting documents: ", error);
+                });
             // console.log(data);
             setSetImg(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
             setLoading(false);
@@ -136,7 +138,8 @@ const FunPage = () => {
     // console.log(myRef);
 
     if (loading) {
-        return <h1>Loading...</h1>
+        // return <h1>Loading...</h1>
+        return <div className="myLoader"><Spin size="large" /></div>;
     }
 
     return (

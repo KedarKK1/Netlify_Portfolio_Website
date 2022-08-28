@@ -5,7 +5,9 @@ import { Routes, Route } from "react-router-dom";
 import HomePage from './pages/Home/HomePage';
 import FunPage from './pages/Fun/FunPage';
 import LandingPage from './pages/LandingPage/LandingPage.js';
+import ReactGA from 'react-ga';
 import Error404 from './components/Error Page/Error404';
+import { useEffect } from 'react';
 // import { Helmet } from 'react-helmet';
 // import LandingPage3 from './components/LandingPage/LandingPage3';
 // import AOS from 'aos';
@@ -20,6 +22,11 @@ function App() {
   //   AOS.init();
   //   AOS.refresh();
   // }, []);
+  useEffect(() => {
+    ReactGA.initialize('G-914TRTHS5H');
+    ReactGA.pageview(window.location.pathname + window.location.search);
+    //  console.log("test");
+  }, [])
 
   return (
     <div className="App">
