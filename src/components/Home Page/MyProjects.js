@@ -7,9 +7,9 @@ import { useSelector } from 'react-redux';
 
 const MyProjects = (props) => {
 
-    const theme = useSelector((state)=>state.themeReducer);
+    const theme = useSelector((state) => state.themeReducer);
     const textColor = props.textColor.myTextcolor
-    const myCardColor = theme.theme != "light" ? "#141E27" : "";
+    const myCardColor = theme.theme !== "light" ? "#141E27" : "";
 
     useEffect(() => {
         Aos.init({
@@ -22,11 +22,11 @@ const MyProjects = (props) => {
         <>
             <Layout id="projects">
                 <Content style={{ backgroundColor: props.color.myBackgroundColor, paddingTop: 15, paddingBottom: 15 }} data-aos="fade-up" data-aos-anchor-placement="top-center">
-                    <h1 style={{color: textColor}}> <b><u>My Projects</u></b> </h1>
+                    <h1 style={{ color: textColor }}> <b><u>My Projects</u></b> </h1>
                     <Row>
                         <Col xxl={2} xl={2} lg={2} xs={2} md={2} sm={2} />
                         <Col xxl={6} xl={6} lg={6} xs={20} md={20} sm={20} >
-                            <Card bodyStyle={{ backgroundColor: myCardColor, color: textColor}}
+                            <Card bodyStyle={{ backgroundColor: myCardColor, color: textColor }}
                                 title="PanditMitra - Pandit Booking Website (Frontend + Backend)"
                                 // extra={<a href="#">More</a>}
                                 style={{
@@ -47,7 +47,7 @@ const MyProjects = (props) => {
                         <Col xxl={1} xl={1} lg={1} xs={2} md={2} sm={2} />
                         <Col xxl={0} xl={0} lg={0} xs={2} md={2} sm={2} />
                         <Col xxl={6} xl={6} lg={6} xs={20} md={20} sm={20} >
-                            <Card bodyStyle={{ backgroundColor: myCardColor, color: textColor}}
+                            <Card bodyStyle={{ backgroundColor: myCardColor, color: textColor }}
                                 title="Ecommerce site(Solo project Backend+Frontend)"
                                 // extra={<a href="#">More</a>}
                                 style={{
@@ -83,7 +83,7 @@ const MyProjects = (props) => {
                                 <p><b>Tech Stack used/learned - </b> HTML, CSS, Bootstrap, Javascript, Django, JQuery </p>
                                 <p><b>Used By - </b> Hundreds of students (intercollge and intracollege)</p>
                             </Card> */}
-                            <Card bodyStyle={{ backgroundColor: myCardColor, color: textColor}}
+                            <Card bodyStyle={{ backgroundColor: myCardColor, color: textColor }}
                                 title="B'day Reminder & Daily Task Manager"
                                 // extra={<h6>More</h6>}
                                 // subTitle="This is a subtitle"
