@@ -117,9 +117,9 @@ const HomePage = () => {
     // },
     // ];
     const theme = useSelector((state)=>state.themeReducer);
-    const myBackgroundColor = theme.theme != "light" ? "#222831" : "";
-    const myTextcolor = theme.theme == "light" ? "black" : "white";
-    const myCardColor = theme.theme != "light" ? "black" : "";
+    const myBackgroundColor = theme.theme !== "light" ? "#222831" : "";
+    const myTextcolor = theme.theme === "light" ? "black" : "white";
+    const myCardColor = theme.theme !== "light" ? "black" : "";
     // console.log("color",myBackgroundColor)
 
   return (

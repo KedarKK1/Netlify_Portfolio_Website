@@ -30,8 +30,8 @@ const LandingPage = () => {
     
     }, [])
 
-    const myBackgroundColor = theme.theme != "light" ? "#222831" : "";
-    const myTextcolor = theme.theme == "light" ? "black" : "white";
+    const myBackgroundColor = theme.theme !== "light" ? "#222831" : "";
+    const myTextcolor = theme.theme === "light" ? "black" : "white";
 
   return (
     <div >

@@ -8,7 +8,7 @@ const MyExperience = (props) => {
     const theme = useSelector((state) => state.themeReducer);
     const textColor = props.textColor.myTextcolor
     // const myCardColor = theme.theme != "light" ? "#222222" : "";
-    const myCardColor = theme.theme != "light" ? "#141E27" : "";
+    const myCardColor = theme.theme !== "light" ? "#141E27" : "";
 
     return (
         <>

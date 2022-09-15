@@ -14,7 +14,7 @@ const NavbarHeader = () => {
   const dispatch = useDispatch();
   const changeTheme = () => {
     console.log("curerent theme ",theme.theme)
-    if(theme.theme == "light"){
+    if(theme.theme === "light"){
       dispatch(setTheme("dark"));
       console.log("switched to dark theme")
     }else{
@@ -85,7 +85,7 @@ const NavbarHeader = () => {
                 <Menu.Item key={'contact'} ><a href="/Homepage#contact">Contact Me</a></Menu.Item> 
                 <Menu.Item key={'Funpage'} ><Link to="/Funpage">Fun Page</Link></Menu.Item>
                 {/* <Switch checkedChildren="DARK" unCheckedChildren="LIGHT" defaultChecked onChange={onChange} /> */}
-                <Menu.Item key={'darklight'} style={{display: 'flex', alignItems: 'center'}}><Switch checked={theme.theme == "light" ? false : true } checkedChildren="DARK MODE" unCheckedChildren="LIGHT MODE" onChange={()=>changeTheme()} /></Menu.Item>
+                <Menu.Item key={'darklight'} style={{display: 'flex', alignItems: 'center'}}><Switch checked={theme.theme === "light" ? false : true } checkedChildren="DARK MODE" unCheckedChildren="LIGHT MODE" onChange={()=>changeTheme()} /></Menu.Item>
               </Menu>
             </Col>
             <Col  xxl={1} xl={1} lg={1} xs={0} md={0} sm={0} />
