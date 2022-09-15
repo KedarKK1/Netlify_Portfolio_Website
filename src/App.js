@@ -14,6 +14,8 @@ import { useEffect } from 'react';
 // import { useEffect } from 'react';
 // import LandingPage from './components/LandingPage/LandingPage';
 // import CodeEditor from './components/Coding/CodeEditor';
+import { Provider } from 'react-redux'
+import { Store } from './redux/store';
 
 function App() {
   
@@ -64,7 +66,7 @@ function App() {
         <title>my Title</title>
         <meta name="This will be name in gsearch" content="This is what gonna show in google search" />
       </Helmet> */}
-
+    <Provider store={Store}>
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/Homepage" index element={<HomePage />} />
@@ -73,6 +75,7 @@ function App() {
         <Route path="*" element={<Error404 />} />
         {/* <Route path="/codeEditor" element={<CodeEditor />} /> */}
       </Routes>
+    </Provider>
 
       {/* <Navbar bg="dark" variant="dark" fixed="bottom">
         <Container className="flex-row justify-content-center">

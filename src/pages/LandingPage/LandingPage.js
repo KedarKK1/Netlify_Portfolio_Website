@@ -11,12 +11,15 @@ import "aos/dist/aos.css";
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react'
 import { Helmet } from 'react-helmet'
+import { useSelector } from 'react-redux';
 
 const LandingPage = () => {
+    const theme = useSelector((state)=>state.themeReducer);
 
     const myInterest = [
-        "Student",
-        "Full Stack Developer",
+        "Student (PICT'24)",
+        "Full Stack Web-Developer",
+        "Open-Source Software Enthusiast from India",
         "Blockchain enthusiast",
     ]
 
@@ -26,20 +29,23 @@ const LandingPage = () => {
         });
     
     }, [])
-    
+
+    const myBackgroundColor = theme.theme != "light" ? "#222831" : "";
+    const myTextcolor = theme.theme == "light" ? "black" : "white";
+
   return (
     <div >
         <Helmet>
             <title>Landing Page</title>
             <meta name="landing page" content="landing page, basic information"  />
         </Helmet>
-        <Layout style={{ minHeight: "100vh" }} >
+        <Layout style={{ minHeight: "100vh", backgroundColor: myBackgroundColor }} >
 
             <NavbarHeader />
 
             <div className="main-content">
                 <Layout >
-                    <Content>
+                    <Content style={{ backgroundColor: myBackgroundColor }}>
                         <Row className="myRow2" style={{justifyContent: 'center'}}>
                             <Col xxl={1} xl={1} lg={1} xs={1} md={1} sm={1} />
 
@@ -53,9 +59,9 @@ const LandingPage = () => {
 
                             <Col xxl={12} xl={12} lg={12} xs={22} md={22} sm={22} data-aos="zoom-in" >
                                 <div style={{marginTop: 15}} >
-                                    <h3>Welcome guys,</h3>
-                                    <div><h1>I'm <b> Kedar Koshti</b></h1> </div>
-                                    <h5>I'm a <b>{myInterest.map((interest) => interest + " | ")}</b> </h5>
+                                    <h3 style={{color: myTextcolor}}>Welcome guys,</h3>
+                                    <div><h1 style={{color: myTextcolor}}>I'm <b> Kedar Koshti</b></h1> </div>
+                                    <h5 style={{color: myTextcolor}}>I'm a <b>{myInterest.map((interest) => interest + " | ")}</b> </h5>
                                 </div>
 
                                 <div>

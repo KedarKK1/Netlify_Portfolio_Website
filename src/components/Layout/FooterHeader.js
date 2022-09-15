@@ -19,6 +19,8 @@ const FooterHeader = () => {
                 left: '0',
                 bottom: '0',
                 width: '100%',
+                backgroundColor: "rgb(10, 41, 92)",
+                color: "rgb(255, 255, 255)"
               }}>
           Made with ❤️ by Kedar Koshti
         </Footer>

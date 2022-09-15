@@ -1,13 +1,27 @@
-import { Layout, Row, Col, Menu } from 'antd';
+import { Layout, Row, Col, Menu, Switch } from 'antd';
 import { Header } from 'antd/lib/layout/layout';
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 // import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 import kLogo from "../../images/kLogo.jpg"
+import { setTheme } from '../../redux/actions';
 import './NavbarHeader.css'
 // import { AppstoreOutlined, MailOutlined, SettingOutlined, heckOutlined, CloseOutlined, CheckOutlined } from '@ant-design/icons';
 
 const NavbarHeader = () => {
+  const theme = useSelector((state)=>state.themeReducer);
+  const dispatch = useDispatch();
+  const changeTheme = () => {
+    console.log("curerent theme ",theme.theme)
+    if(theme.theme == "light"){
+      dispatch(setTheme("dark"));
+      console.log("switched to dark theme")
+    }else{
+      dispatch(setTheme("light"));
+      console.log("switched to light theme")
+    }
+  };
   return (
     // <div>
     //   <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -55,7 +69,7 @@ const NavbarHeader = () => {
                 float: 'right',
                 textAlign: 'right',
                 border: 'none',
-                width: '60%',
+                width: '70%',
               }}>
 
                 {/* <Menu.Item key={'skills'} ><a href="/Portfolio_Website/#skills"> My Skills</a></Menu.Item> 
@@ -64,13 +78,14 @@ const NavbarHeader = () => {
                 <Menu.Item key={'contact'} ><a href="/Portfolio_Website/#contact">Contact Me</a></Menu.Item> 
                 <Menu.Item key={'Funpage'} ><Link to="/Portfolio_Website/Fun_Page">Fun Page</Link></Menu.Item>  */}
                 
-                <Menu.Item key={'landing'} ><a href="/">Landing Page</a></Menu.Item> 
+                <Menu.Item key={'landing'} ><Link to="/">Landing Page</Link></Menu.Item> 
                 <Menu.Item key={'skills'} ><a href="/Homepage#skills"> My Skills</a></Menu.Item> 
                 <Menu.Item key={'projects'} ><a href="/Homepage#projects">My Projects</a></Menu.Item> 
                 <Menu.Item key={'resume'} ><a href="https://drive.google.com/file/d/1pBtvhj1HzP0p5T1aUwUMgp2KbfuQRAPm/view?usp=sharing">My Resumé</a></Menu.Item> 
                 <Menu.Item key={'contact'} ><a href="/Homepage#contact">Contact Me</a></Menu.Item> 
                 <Menu.Item key={'Funpage'} ><Link to="/Funpage">Fun Page</Link></Menu.Item>
-
+                {/* <Switch checkedChildren="DARK" unCheckedChildren="LIGHT" defaultChecked onChange={onChange} /> */}
+                <Menu.Item key={'darklight'} style={{display: 'flex', alignItems: 'center'}}><Switch checked={theme.theme == "light" ? false : true } checkedChildren="DARK MODE" unCheckedChildren="LIGHT MODE" onChange={()=>changeTheme()} /></Menu.Item>
               </Menu>
             </Col>
             <Col  xxl={1} xl={1} lg={1} xs={0} md={0} sm={0} />

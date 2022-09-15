@@ -7,7 +7,7 @@ import { collection, getDocs, doc, updateDoc } from "firebase/firestore"
 import { useEffect } from 'react';
 import { useState } from 'react';
 
-const VisitorsCount = () => {
+const VisitorsCount = (props) => {
   const [currentNumber, setCurrentNumber] = useState(0);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -30,6 +30,7 @@ const VisitorsCount = () => {
     getVisitorsCountAndUpdateInFirebase();
 
   },[])
+  const textColor = props.textColor.myTextcolor
 
   if(loading){
     return(
@@ -41,9 +42,9 @@ const VisitorsCount = () => {
   return (
     <>
         <Layout>
-            <Content style={{ marginTop: 15}} data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                <h1> <b><u>Total Visits on this page</u></b> </h1>
-                <div className="text-center"><b><h4>{currentNumber}</h4></b></div>
+            <Content style={{ paddingTop: 15, backgroundColor: props.color.myBackgroundColor}} data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                <h1 style={{color: textColor}}> <b><u>Total Visits on this page</u></b> </h1>
+                <div className="text-center"><b><h4 style={{color: textColor}}>{currentNumber}</h4></b></div>
             </Content>
         </Layout>
     </>

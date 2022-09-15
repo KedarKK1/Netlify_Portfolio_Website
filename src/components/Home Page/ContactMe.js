@@ -5,7 +5,8 @@ import React, { useEffect } from 'react'
 import Aos from 'aos';
 import "aos/dist/aos.css";
 
-const ContactMe = () => {
+const ContactMe = (props) => {
+    const textColor = props.textColor.myTextcolor
 
     const handleSubmit = () => {
         alert("Submting 'Contact Me' is not done yet. Please try Gmail link or LinkedIn link on left/up.")
@@ -21,8 +22,8 @@ const ContactMe = () => {
   return (
     <>
     <Layout id="contact">
-        <Content style={{ marginTop: 15}} data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-            <h1> <b><u>Contact Me</u></b> </h1>
+        <Content style={{ backgroundColor: props.color.myBackgroundColor, paddingTop: 15}} data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            <h1 style={{color: textColor}}><b><u>Contact Me</u></b> </h1>
             <Row style={{ marginTop: 15}}>
                 <Col xxl={2} xl={2} lg={2} xs={2} md={2} sm={2} />
 
@@ -37,7 +38,10 @@ const ContactMe = () => {
                     <Form style={{ marginTop: 15}}>
                         <Form.Item
                             name={['user', 'name']}
-                            label="Name"
+                            // label="Name"
+                            label={
+                                <div style={{color: textColor}}>Name</div>
+                            }
                             rules={[
                             {
                                 required: true,
@@ -48,7 +52,9 @@ const ContactMe = () => {
                         </Form.Item>   
                         <Form.Item
                             name={['email']}
-                            label="Email"
+                            label={
+                                <div style={{color: textColor}}>Email</div>
+                            }
                             rules={[
                             {
                                 type: 'email',
@@ -64,7 +70,10 @@ const ContactMe = () => {
                         </Form.Item>      
                         <Form.Item 
                             name={['user', 'description']} 
-                            label="Description"
+                            // label="Description"
+                            label={
+                                <div style={{color: textColor}}>Description</div>
+                            }
                             rules={[
                                 {
                                     required: true,

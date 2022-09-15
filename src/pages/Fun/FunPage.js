@@ -9,6 +9,7 @@ import { db } from "../../firebase";
 import { addDoc, collection, getDocs, deleteDoc, doc, updateDoc } from "firebase/firestore"
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
+import { useSelector } from 'react-redux';
 // import InfiniteScroll from 'react-infinite-scroll-component';
 // import firebase from "firebase/compat/app";
 // require('firebase/database');
@@ -24,6 +25,11 @@ const FunPage = () => {
     const [setImg, setSetImg] = useState([]);
     const [loading, setLoading] = useState(false);
     const [visible, setVisible] = useState(false);
+    const theme = useSelector((state)=>state.themeReducer);
+
+    const myBackgroundColor = theme.theme != "light" ? "#222831" : "";
+    const myTextcolor = theme.theme == "light" ? "black" : "white";
+    const myCardColor = theme.theme != "light" ? "black" : "";
     // const [modalText, setModalText] = useState(['id remains same']);
     const modalText = ['id remains same'];
     const showModal = () => {
@@ -151,8 +157,8 @@ const FunPage = () => {
 
             <NavbarHeader />
             <Layout>
-                <Content>
-                    <h3 style={{ marginTop: 15 }}>
+                <Content style={{backgroundColor: myBackgroundColor}}>
+                    <h3 style={{ marginTop: 15, color: myTextcolor }}>
                         <u>Welcome to my Meme Page</u>
                     </h3>
                     <Row>
@@ -192,7 +198,7 @@ const FunPage = () => {
                             return <>
                                 <Col className="my-3" xxl={1} xl={1} lg={1} md={1} sm={1} xs={2} />
                                 <Col className="my-3" xxl={6} xl={6} lg={6} md={10} sm={10} xs={20} >
-                                    <Card>
+                                    <Card bodyStyle={{ backgroundColor: myCardColor}}>
                                         <p style={{ display: 'none' }}> {noOfCards++}</p>
                                         <img key="{imgSrc.id}" src={imgSrc.imgUrl} className="memeImg" alt={imgSrc.id} />
                                         <Button type="primary" block style={{ marginTop: "10px" }} onClick={showModal}>Edit</Button>

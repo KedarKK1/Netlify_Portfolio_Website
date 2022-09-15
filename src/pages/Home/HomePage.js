@@ -13,6 +13,9 @@ import MyProjects from "../../components/Home Page/MyProjects";
 import ContactMe from "../../components/Home Page/ContactMe";
 import { Helmet } from 'react-helmet';
 import VisitorsCount from '../../components/Home Page/VisitorsCount';
+import MyExperience from '../../components/Home Page/MyExperience';
+import { useSelector } from 'react-redux';
+
 // const SubMenu = Menu.SubMenu;
 // const MenuItemGroup = Menu.ItemGroup;
 /*this is for importing dark theme of antd  */
@@ -28,7 +31,6 @@ import VisitorsCount from '../../components/Home Page/VisitorsCount';
 //     ),
 //     key: 'theme',
 // },
-
 const HomePage = () => {
     // const [container, setContainer] = useState(null);
     // const [theme, setTheme] = useState('light');
@@ -114,9 +116,14 @@ const HomePage = () => {
     //     key: 'theme',
     // },
     // ];
-  
+    const theme = useSelector((state)=>state.themeReducer);
+    const myBackgroundColor = theme.theme != "light" ? "#222831" : "";
+    const myTextcolor = theme.theme == "light" ? "black" : "white";
+    const myCardColor = theme.theme != "light" ? "black" : "";
+    // console.log("color",myBackgroundColor)
+
   return (
-    <div>
+    <div >
         <Helmet>
             <title>Portfolio Website</title>
             <meta name="Portfolio" content="Fortfolio page website skills projects contact me about me fun page "  />
@@ -153,13 +160,14 @@ const HomePage = () => {
                 />
             </Content>
         </Layout> */}
-        <div className="random_div">
-            <MyLayout />
+        <div className="random_div" >
+            <MyLayout color={{myBackgroundColor}} textColor={{myTextcolor}} />
             {/* Note giving id here will not make it work, give ID's to divs inside components */}
-            <MySkills id="skills" />
-            <MyProjects />
-            <ContactMe />
-            <VisitorsCount />
+            <MySkills id="skills" color={{myBackgroundColor}} textColor={{myTextcolor}} />
+            <MyExperience color={{myBackgroundColor}} textColor={{myTextcolor}} cardColor={{myCardColor}} />
+            <MyProjects color={{myBackgroundColor}} textColor={{myTextcolor}} cardColor={{myCardColor}} />
+            <ContactMe color={{myBackgroundColor}} textColor={{myTextcolor}} />
+            <VisitorsCount color={{myBackgroundColor}} textColor={{myTextcolor}} />
         </div>
 
 

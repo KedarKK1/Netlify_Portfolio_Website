@@ -24,6 +24,9 @@ My Portfolio Website Deployed
 - Site is Responsive, and mobile-friendly
 - Animations are added to landing page and portfolio website (AOS library)
 - Dynamic titles to each webpage and seo-friendly (react-helmet) 
+- Dark Mode/Light Mode (state management using Redux)
+- Number of visits on HomePage (using Firebase counter)
+- Google Analytics tracking
 
 # Future Scope
 - Infinite scroll on funpage
