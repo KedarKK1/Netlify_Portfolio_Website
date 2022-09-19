@@ -81,7 +81,7 @@ const NavbarHeader = () => {
                 <Menu.Item key={'landing'} ><Link to="/">Landing Page</Link></Menu.Item> 
                 <Menu.Item key={'skills'} ><a href="/Homepage#skills"> My Skills</a></Menu.Item> 
                 <Menu.Item key={'projects'} ><a href="/Homepage#projects">My Projects</a></Menu.Item> 
-                <Menu.Item key={'resume'} ><a href="https://drive.google.com/file/d/1pBtvhj1HzP0p5T1aUwUMgp2KbfuQRAPm/view?usp=sharing">My Resumé</a></Menu.Item> 
+                <Menu.Item key={'resume'} ><a href="https://drive.google.com/file/d/1vnjSH0WqRrOV3Zxg67j665tCvxeyNgYH/view?usp=sharing">My Resumé</a></Menu.Item> 
                 <Menu.Item key={'contact'} ><a href="/Homepage#contact">Contact Me</a></Menu.Item> 
                 <Menu.Item key={'Funpage'} ><Link to="/Funpage">Fun Page</Link></Menu.Item>
                 {/* <Switch checkedChildren="DARK" unCheckedChildren="LIGHT" defaultChecked onChange={onChange} /> */}
