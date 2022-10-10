@@ -85,7 +85,29 @@ const NavbarHeader = () => {
                 <Menu.Item key={'contact'} ><a href="/Homepage#contact">Contact Me</a></Menu.Item> 
                 <Menu.Item key={'Funpage'} ><Link to="/Funpage">Fun Page</Link></Menu.Item>
                 {/* <Switch checkedChildren="DARK" unCheckedChildren="LIGHT" defaultChecked onChange={onChange} /> */}
-                <Menu.Item key={'darklight'} style={{display: 'flex', alignItems: 'center'}}><Switch checked={theme.theme === "light" ? false : true } checkedChildren="DARK MODE" unCheckedChildren="LIGHT MODE" onChange={()=>changeTheme()} /></Menu.Item>
+                <Menu.Item key={'darklight'} 
+                 style={{display: 'flex', alignItems: 'center'}}>
+                  <Switch checked={theme.theme === "light" ? false : true } 
+                    checkedChildren={<span><img src="data:image/svg+xml;base64,
+                    PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaG
+                    VpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBzdHJva2U9IndoaXRlIiBmaWxsPSJ3
+                    aGl0ZSIgbGluZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9In
+                    JvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0iZmVhdGhlciBmZWF0aGVy
+                    LXN1biI+PGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iNSI+PC9jaXJjbGU+PGxpbmUgeD
+                    E9IjEyIiB5MT0iMSIgeDI9IjEyIiB5Mj0iMyI+PC9saW5lPjxsaW5lIHgxPSIxMiIgeTE9
+                    IjIxIiB4Mj0iMTIiIHkyPSIyMyI+PC9saW5lPjxsaW5lIHgxPSI0LjIyIiB5MT0iNC4yMi
+                    IgeDI9IjUuNjQiIHkyPSI1LjY0Ij48L2xpbmU+PGxpbmUgeDE9IjE4LjM2IiB5MT0iMTgu
+                    MzYiIHgyPSIxOS43OCIgeTI9IjE5Ljc4Ij48L2xpbmU+PGxpbmUgeDE9IjEiIHkxPSIxMi
+                    IgeDI9IjMiIHkyPSIxMiI+PC9saW5lPjxsaW5lIHgxPSIyMSIgeTE9IjEyIiB4Mj0iMjMi
+                    IHkyPSIxMiI+PC9saW5lPjxsaW5lIHgxPSI0LjIyIiB5MT0iMTkuNzgiIHgyPSI1LjY0Ii
+                    B5Mj0iMTguMzYiPjwvbGluZT48bGluZSB4MT0iMTguMzYiIHkxPSI1LjY0IiB4Mj0iMTku
+                    NzgiIHkyPSI0LjIyIj48L2xpbmU+PC9zdmc+" alt="dark" /></span>} 
+                    unCheckedChildren={<span><img src='data:image/svg+xml;base64,PHN2ZyB4b
+                    Wxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSI
+                    yNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb
+                    2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1
+                    saW5lam9pbj0icm91bmQiIGNsYXNzPSJmZWF0aGVyIGZlYXRoZXItbW9vbiI+PHBhdGggZ
+                    D0iTTIxIDEyLjc5QTkgOSAwIDEgMSAxMS4yMSAzIDcgNyAwIDAgMCAyMSAxMi43OXoiPjwvcGF0aD48L3N2Zz4='/></span>} onChange={()=>changeTheme()} /></Menu.Item>
               </Menu>
             </Col>
             <Col  xxl={1} xl={1} lg={1} xs={0} md={0} sm={0} />
