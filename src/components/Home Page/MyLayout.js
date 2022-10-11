@@ -1,5 +1,6 @@
-import { Col, Layout, Row, Typography } from 'antd';
-import { Content } from 'antd/lib/layout/layout';
+// import { Col, Layout, Row, Typography } from 'antd';
+import { Col, Row, Typography } from 'antd';
+// import { Content } from 'antd/lib/layout/layout';
 import React, { Fragment, useEffect } from 'react';
 import kkImg from '../../images/kkImg.jpeg';
 import './MyLayout.css';
@@ -21,9 +22,10 @@ const MyLayout = (props) => {
     // console.log("textColor", textColor)
     return (
         <Fragment>
-            <Layout style={{ backgroundColor: props.color.myBackgroundColor }}>
-                <Content style={{ marginTop: 30 }} >
-                    <Row justify="space-around" align="middle" >
+            {/* <Layout style={{ backgroundColor: props.color.myBackgroundColor }}>  */}
+                {/* <Content style={{ marginTop: 30 }} >     */}
+                    {/* <Row className="myLayout" justify="space-around" align="middle" style={{backgroundColor: props.color.myBackgroundColor}} > */}
+                    <Row justify="space-around" align="middle" style={{backgroundColor: props.color.myBackgroundColor}} >
                         <Col xxl={1} xl={1} lg={1} xs={1} md={1} sm={1} />
 
                         <Col xxl={9} xl={9} lg={9} xs={22} md={22} sm={22} className="myCol" >
@@ -35,14 +37,14 @@ const MyLayout = (props) => {
                         <Col xxl={11} xl={11} lg={11} xs={22} md={22} sm={22} style={{ overflow: 'hidden' }}>
                             <div style={{ marginTop: '20px' }} data-aos="zoom-out">
                                 <Row justify="space-around" align="middle"  >
-                                    <span data-aos="zoom-out-right" data-aos-delay="200"><h3 style={{color: textColor}}>N</h3></span>
-                                    <span data-aos="zoom-out-right" data-aos-delay="400"><h3 style={{color: textColor}}>a</h3></span>
-                                    <span data-aos="zoom-out-right" data-aos-delay="600"><h3 style={{color: textColor}}>m</h3></span>
-                                    <span data-aos="zoom-out-right" data-aos-delay="800"><h3 style={{color: textColor}}>a</h3></span>
-                                    <span data-aos="zoom-out-right" data-aos-delay="1000"><h3 style={{color: textColor}}>s</h3></span>
-                                    <span data-aos="zoom-out-right" data-aos-delay="1200"><h3 style={{color: textColor}}>t</h3></span>
-                                    <span data-aos="zoom-out-right" data-aos-delay="1400"><h3 style={{color: textColor}}>e</h3></span>
-                                    <span data-aos="zoom-out-right" data-aos-delay="1600"><h3 style={{color: textColor}}>!</h3></span>
+                                    <span data-aos="zoom-out-right" data-aos-delay="200"><h3 style={{ color: textColor }}>N</h3></span>
+                                    <span data-aos="zoom-out-right" data-aos-delay="400"><h3 style={{ color: textColor }}>a</h3></span>
+                                    <span data-aos="zoom-out-right" data-aos-delay="600"><h3 style={{ color: textColor }}>m</h3></span>
+                                    <span data-aos="zoom-out-right" data-aos-delay="800"><h3 style={{ color: textColor }}>a</h3></span>
+                                    <span data-aos="zoom-out-right" data-aos-delay="1000"><h3 style={{ color: textColor }}>s</h3></span>
+                                    <span data-aos="zoom-out-right" data-aos-delay="1200"><h3 style={{ color: textColor }}>t</h3></span>
+                                    <span data-aos="zoom-out-right" data-aos-delay="1400"><h3 style={{ color: textColor }}>e</h3></span>
+                                    <span data-aos="zoom-out-right" data-aos-delay="1600"><h3 style={{ color: textColor }}>!</h3></span>
                                     <span data-aos="zoom-out-right" data-aos-delay="1800"><img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="45px" height="45px" alt="hiImg" /></span>
                                 </Row>
                                 <h3 >
@@ -62,8 +64,8 @@ const MyLayout = (props) => {
 
                         <Col xxl={1} xl={1} lg={1} xs={1} md={1} sm={1} />
                     </Row>
-                </Content>
-            </Layout>
+                {/* </Content>   */}
+            {/* </Layout>    */}
         </Fragment>
     )
 }

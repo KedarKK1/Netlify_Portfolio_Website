@@ -1,6 +1,7 @@
 import React from 'react'
-import { Layout, Spin } from 'antd'
-import { Content } from 'antd/lib/layout/layout'
+// import { Layout, Spin } from 'antd'
+import { Spin } from 'antd'
+// import { Content } from 'antd/lib/layout/layout'
 // import { Col, Layout, Row } from 'antd'
 import { db } from "../../firebase";
 import { collection, getDocs, doc, updateDoc } from "firebase/firestore"
@@ -41,12 +42,12 @@ const VisitorsCount = (props) => {
   }
   return (
     <>
-        <Layout>
-            <Content style={{ paddingTop: 15, backgroundColor: props.color.myBackgroundColor}} data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                <h1 style={{color: textColor}}> <b><u>Total Visits on this page</u></b> </h1>
-                <div className="text-center"><b><h4 style={{color: textColor}}>{currentNumber}</h4></b></div>
-            </Content>
-        </Layout>
+        {/* <Layout> */}
+            {/* <Content style={{ paddingTop: 15, backgroundColor: props.color.myBackgroundColor}} data-aos="fade-up" data-aos-anchor-placement="top-bottom"> */}
+                <h1 style={{ paddingTop: "15px", backgroundColor: props.color.myBackgroundColor, color: textColor, marginBottom: "0px" }}> <b><u>Total Visits on this page</u></b> </h1>
+                <div className="text-center"><b><h4 style={{paddingTop: "15px", backgroundColor: props.color.myBackgroundColor, color: textColor, paddingBottom: "15px", marginBottom: "0px" }}>{currentNumber}</h4></b></div>
+            {/* </Content> */}
+        {/* </Layout> */}
     </>
   )
 }

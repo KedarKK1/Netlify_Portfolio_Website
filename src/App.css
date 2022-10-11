@@ -1,3 +1,10 @@
+body{
+  background: url("./images/bannerBg1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
 body::-webkit-scrollbar-track
 {
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);

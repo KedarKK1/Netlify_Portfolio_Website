@@ -1,0 +1,17 @@
+.myExperience{
+    background-image: url("../../images/bg3.png"),
+                        url("../../images/bg5.png"),
+                        url("../../images/bg6.png"),
+                        url("../../images/bg4.png");
+    background-repeat: no-repeat,
+                        no-repeat,
+                        no-repeat,
+                        no-repeat;
+    /* background-position: 0 top,  */
+    background-position: 0 10%, 
+                            90% 40%,
+                            10% 60%,
+                            90% bottom;
+
+    
+}

@@ -1,0 +1,7 @@
+.myContact{
+    background-image: url("../../images/bg2.jpg") ;
+    background-repeat: no-repeat ;
+    /* background-position: 0 top,  */
+    background-position: 0 bottom ;
+    background-size: 100% 100%;
+}

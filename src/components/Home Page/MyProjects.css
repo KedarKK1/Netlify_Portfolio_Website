@@ -1,0 +1,17 @@
+.myProjects{
+    background-image: url("../../images/bg3.png"),
+                        url("../../images/bg3.png"),
+                        url("../../images/bg5.png"),
+                        url("../../images/bg6.png");
+    background-repeat: no-repeat,
+                        no-repeat,
+                        no-repeat,
+                        no-repeat;
+    /* background-position: 0 top,  */
+    background-position: 90% bottom, 
+                            0 top,
+                            90% 20%,
+                            10% 50%;
+
+    
+}

@@ -9,12 +9,14 @@ import FooterHeader from "../../components/Layout/FooterHeader";
 // import { Layout} from 'antd';
 import MyLayout from "../../components/Home Page/MyLayout";
 import MySkills from "../../components/Home Page/MySkills"
-import MyProjects from "../../components/Home Page/MyProjects";
+// import MyProjects from "../../components/Home Page/MyProjects";
 import ContactMe from "../../components/Home Page/ContactMe";
 import { Helmet } from 'react-helmet';
 import VisitorsCount from '../../components/Home Page/VisitorsCount';
-import MyExperience from '../../components/Home Page/MyExperience';
+// import MyExperience from '../../components/Home Page/MyExperience';
 import { useSelector } from 'react-redux';
+import MyProjects2 from '../../components/Home Page/MyProjects2';
+import MyExperience2 from '../../components/Home Page/MyExperience2';
 
 // const SubMenu = Menu.SubMenu;
 // const MenuItemGroup = Menu.ItemGroup;
@@ -164,8 +166,10 @@ const HomePage = () => {
             <MyLayout color={{myBackgroundColor}} textColor={{myTextcolor}} />
             {/* Note giving id here will not make it work, give ID's to divs inside components */}
             <MySkills id="skills" color={{myBackgroundColor}} textColor={{myTextcolor}} />
-            <MyExperience color={{myBackgroundColor}} textColor={{myTextcolor}} cardColor={{myCardColor}} />
-            <MyProjects color={{myBackgroundColor}} textColor={{myTextcolor}} cardColor={{myCardColor}} />
+            {/* <MyExperience color={{myBackgroundColor}} textColor={{myTextcolor}} cardColor={{myCardColor}} /> */}
+            <MyExperience2 color={{myBackgroundColor}} textColor={{myTextcolor}} cardColor={{myCardColor}} />
+            {/* <MyProjects color={{myBackgroundColor}} textColor={{myTextcolor}} cardColor={{myCardColor}} /> */}
+            <MyProjects2 color={{myBackgroundColor}} textColor={{myTextcolor}} cardColor={{myCardColor}} />
             <ContactMe color={{myBackgroundColor}} textColor={{myTextcolor}} />
             <VisitorsCount color={{myBackgroundColor}} textColor={{myTextcolor}} />
         </div>
