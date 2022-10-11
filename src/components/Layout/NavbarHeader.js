@@ -107,7 +107,7 @@ const NavbarHeader = () => {
                     yNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb
                     2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1
                     saW5lam9pbj0icm91bmQiIGNsYXNzPSJmZWF0aGVyIGZlYXRoZXItbW9vbiI+PHBhdGggZ
-                    D0iTTIxIDEyLjc5QTkgOSAwIDEgMSAxMS4yMSAzIDcgNyAwIDAgMCAyMSAxMi43OXoiPjwvcGF0aD48L3N2Zz4='/></span>} onChange={()=>changeTheme()} /></Menu.Item>
+                    D0iTTIxIDEyLjc5QTkgOSAwIDEgMSAxMS4yMSAzIDcgNyAwIDAgMCAyMSAxMi43OXoiPjwvcGF0aD48L3N2Zz4=' alt="light" /></span>} onChange={()=>changeTheme()} /></Menu.Item>
               </Menu>
             </Col>
             <Col  xxl={1} xl={1} lg={1} xs={0} md={0} sm={0} />
