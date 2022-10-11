@@ -55,7 +55,7 @@ const MyProjects = (props) => {
                                     marginTop: 15,
                                 }}
                             >
-                                <p><b>Features - </b>CRUD(Products, Orders) using RESTful API, Authentication with , Authorization, Page-Routing, Pagination, Error-handeling </p>
+                                <p><b>Features - </b>CRUD(Products, Orders) using RESTful API, Authentication with JWT, Authorization, Page-Routing, Pagination, Error-handeling </p>
                                 <p><b>Tech Stack used/learned - </b> MERN(Node js, React js, MongoDB, Express), Postman, Semantic UI, </p>
                                 <p><b>Dependencies used/learned - </b> NodeMailer, react-router-dom, react-paginator, </p>
                                 <p><b>Used By - </b> Deploying in process </p>

@@ -1,7 +1,7 @@
 // import { Layout, Row, Col, Button, Form, Input, InputNumber } from 'antd';
 import { Row, Col, Button, Form, Input } from 'antd';
 // import { Content } from 'antd/lib/layout/layout'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Aos from 'aos';
 import "aos/dist/aos.css";
 import './MyContact.css';
@@ -9,12 +9,27 @@ import { Fragment } from 'react';
 // import { useSelector } from 'react-redux';
 
 const ContactMe = (props) => {
+    const [nameVal, setNameVal] = useState("")
+    const [emailVal, setEmailVal] = useState("")
+    const [descVal, setDescVal] = useState("")
     const textColor = props.textColor.myTextcolor
     // const theme = useSelector((state) => state.themeReducer);
     // const myCardColor = theme.theme !== "light" ? "#141E27" : "";
 
     const handleSubmit = () => {
-        alert("Submting 'Contact Me' is not done yet. Please try Gmail link or LinkedIn link on left/up.")
+        try {
+            
+            // to trim spaces between and place %20 in them
+            let descVal2 = encodeURIComponent(descVal.trim())
+            let nameVal2 = encodeURIComponent(nameVal.trim())
+            let emailVal2 = encodeURIComponent(emailVal.trim())
+            const message = `mailto: officialkedark1@gmail.com?Subject=Kedar%20You've%20got%20message%20from-%20${nameVal2}%20&Email=${emailVal2}%20Body=${descVal2}`
+            // console.log(message);
+            window.location.assign(message)
+            // alert("Submting 'Contact Me' is not done yet. Please try Gmail link or LinkedIn link on left/up.")
+        } catch (err) {
+            alert('Some error occured: ',err)
+        }
     }
 
     useEffect(() => {
@@ -52,6 +67,8 @@ const ContactMe = (props) => {
                                 required: true,
                             },
                             ]}
+                            value={nameVal}
+                            onChange={(e)=>{setNameVal(e.target.value)}}
                         >
                             <Input />
                         </Form.Item>   
@@ -70,6 +87,8 @@ const ContactMe = (props) => {
                                 error: 'Please enter email'
                             },
                             ]}
+                            value={emailVal}
+                            onChange={(e)=>{setEmailVal(e.target.value)}}
                         >
                             <Input />
                         </Form.Item>      
@@ -84,6 +103,8 @@ const ContactMe = (props) => {
                                     required: true,
                                 },
                                 ]}
+                            value={descVal}
+                            onChange={(e)=>{setDescVal(e.target.value)}}
                         >
                             <Input.TextArea />
                         </Form.Item>    
