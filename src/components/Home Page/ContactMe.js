@@ -23,7 +23,8 @@ const ContactMe = (props) => {
             let descVal2 = encodeURIComponent(descVal.trim())
             let nameVal2 = encodeURIComponent(nameVal.trim())
             let emailVal2 = encodeURIComponent(emailVal.trim())
-            const message = `mailto: officialkedark1@gmail.com?Subject=Kedar%20You've%20got%20message%20from-%20${nameVal2}%20&Email=${emailVal2}%20Body=${descVal2}`
+            console.log(descVal2)
+            const message = `mailto: officialkedark1@gmail.com?Subject=Kedar%20You've%20got%20message%20from-%20${nameVal2}%20&Email=${emailVal2}%20&Body=${descVal2}`
             // console.log(message);
             window.location.assign(message)
             // alert("Submting 'Contact Me' is not done yet. Please try Gmail link or LinkedIn link on left/up.")
