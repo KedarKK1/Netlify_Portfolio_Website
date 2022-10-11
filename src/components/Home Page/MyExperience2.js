@@ -29,14 +29,14 @@ const MyExperience2 = (props) => {
                                     <p style={{ color:textColor }}><b>Task</b> - <b><i>Static Responsive webpages creation, Integration tasks(Pagination, Timer, Logout functionality with Django), </i></b>Responsiveness</p>
                                     <p style={{ color:textColor }}><h6 style={{ color:textColor }}><b>Tech Stack used/learned -</b></h6><i>HTML, CSS, Bootstrap, Javascript, Django, JQuery</i></p>
                                     <p style={{ color:textColor }}><h6 style={{ color:textColor }}><b>Used by - </b>Hundreds of students (intercollge and intracollege) </h6></p>
-                                    <p style={{ color:textColor }}><h6 style={{ color:textColor }}><a target="_href" href="https://github.com/KedarKK1/credenz21.git/">link</a></h6></p>
+                                    <p style={{ color:textColor }}><h6 style={{ color:textColor }}><a target="_blank" href="https://github.com/KedarKK1/credenz21.git/">link</a></h6></p>
 
                                 </Timeline.Item>
                                 <Timeline.Item color="red">
                                     <p style={{ color:textColor }}><b><h4 style={{ color:textColor }}>Freelancing - (React-Native + Django-Rest-framework)<u></u></h4>(Jun 22 - Sep 22)</b></p>
                                     <p style={{ color:textColor }}><small>Created an Prototype of an App for a client who had an idea to implement E-commerce website with AI based Search/Sort products</small></p>
                                     <p style={{ color:textColor }}><h6 style={{ color:textColor }}><b>Tech Stack used/learned -</b></h6><i>Django-Rest-Framework, React-Native(expo), TailwindCSS, React-native-Paper, React-navigation, JWT(Djoser), React-maps, Formik</i></p>
-                                    <p style={{ color:textColor }}><h6 style={{ color:textColor }}><a target="_href" href="https://github.com/KedarKK1/Glokit/">link</a></h6></p>
+                                    <p style={{ color:textColor }}><h6 style={{ color:textColor }}><a target="_blank" href="https://github.com/KedarKK1/Glokit/">link</a></h6></p>
                                 </Timeline.Item>
                                 <Timeline.Item color="green">
                                     <p style={{ color:textColor }}><b><h4 style={{ color:textColor }}> PICT FOSS club - MERN(Backend) PICT Placement Portal<u></u></h4>(Aug 22 - Oct 22)</b></p>
@@ -44,7 +44,7 @@ const MyExperience2 = (props) => {
                                     <p style={{ color:textColor }}><h6 style={{ color:textColor }}><b>Tech Stack used/learned -</b></h6><i>MongoDB, NodeJs, ExpressJS, ReactJS, NodeMailer, JOI (validation), JWT, Postman</i></p>
                                     <p style={{ color:textColor }}><h6 style={{ color:textColor }}><b>Features - Job CRUD(admin), Job apply(students), 15+ eligibility check (exceptional student forgiving routes), Status Mail, Report Generation, Authentication, Authorization</b></h6></p>
                                     <p style={{ color:textColor }}><h6 style={{ color:textColor }}><b>My Contribution - Job apply(students) + (15+)criteria checking, Nested deletion of mongodb collections using remove and pre mongodb, Report generation, Status mail sending, integration of jwt with frontend</b></h6></p>
-                                    <p style={{ color:textColor }}><h6 style={{ color:textColor }}><a target="_href" href="https://kedarkoshti.netlify.app/">To be officially deployed as soon as college approves funds (last stage)...</a></h6></p>
+                                    <p style={{ color:textColor }}><h6 style={{ color:textColor }}><a target="_blank" href="https://kedarkoshti.netlify.app/">To be officially deployed as soon as college approves funds (last stage)...</a></h6></p>
                                 </Timeline.Item>
                                 <Timeline.Item color="red">
                                     <p style={{ color:textColor }}><b><h4 style={{ color:textColor }}>Available for your internship<u></u></h4></b></p>
