@@ -12,11 +12,11 @@ import MySkills from "../../components/Home Page/MySkills"
 // import MyProjects from "../../components/Home Page/MyProjects";
 import ContactMe from "../../components/Home Page/ContactMe";
 import { Helmet } from 'react-helmet';
-// import VisitorsCount from '../../components/Home Page/VisitorsCount';
 // import MyExperience from '../../components/Home Page/MyExperience';
 import { useSelector } from 'react-redux';
 import MyProjects2 from '../../components/Home Page/MyProjects2';
 import MyExperience2 from '../../components/Home Page/MyExperience2';
+import VisitorsCount from '../../components/Home Page/VisitorsCount';
 
 // const SubMenu = Menu.SubMenu;
 // const MenuItemGroup = Menu.ItemGroup;
@@ -171,7 +171,7 @@ const HomePage = () => {
                 {/* <MyProjects color={{myBackgroundColor}} textColor={{myTextcolor}} cardColor={{myCardColor}} /> */}
                 <MyProjects2 color={{ myBackgroundColor }} textColor={{ myTextcolor }} cardColor={{ myCardColor }} />
                 <ContactMe color={{ myBackgroundColor }} textColor={{ myTextcolor }} />
-                {/* <VisitorsCount color={{myBackgroundColor}} textColor={{myTextcolor}} /> */}
+                <VisitorsCount color={{myBackgroundColor}} textColor={{myTextcolor}} />
             </div>
 
 

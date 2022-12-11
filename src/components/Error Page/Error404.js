@@ -10,7 +10,7 @@ const Error404 = () => {
                 <img src={Error404gif} alt="Error 404" style={{ maxHeight: "90vh", minWidth: "60vw" }} />
                 <Col>
                     <Button type="primary">
-                        <a href="https://kedarkk1.github.io/Portfolio_Website">Redirect to Landing page</a>
+                        <a href="https://kedarkoshti.netlify.app/">Redirect to Landing page</a>
                     </Button>
                 </Col>
             </Row>
