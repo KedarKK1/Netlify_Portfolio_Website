@@ -113,24 +113,24 @@ const HomePage = () => {
     //         checkedChildren="Dark"
     //         unCheckedChildren="Light"
     //     />
-    
+
     //     ),
     //     key: 'theme',
     // },
     // ];
-    const theme = useSelector((state)=>state.themeReducer);
+    const theme = useSelector((state) => state.themeReducer);
     const myBackgroundColor = theme.theme !== "light" ? "#222831" : "";
     const myTextcolor = theme.theme === "light" ? "black" : "white";
     const myCardColor = theme.theme !== "light" ? "black" : "";
     // console.log("color",myBackgroundColor)
 
-  return (
-    <div >
-        <Helmet>
-            <title>Portfolio Website</title>
-            <meta name="Portfolio" content="Fortfolio page website skills projects contact me about me fun page "  />
-        </Helmet>
-        {/* <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" theme={theme} items={items} >
+    return (
+        <div >
+            <Helmet>
+                <title>Portfolio Website</title>
+                <meta name="Portfolio" content="Fortfolio page website skills projects contact me about me fun page " />
+            </Helmet>
+            {/* <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" theme={theme} items={items} >
 
            <SubMenu style={{float: 'right'}} title={<span>Navigation Three - Submenu</span>}>
                 <MenuItemGroup title="Item 1">
@@ -146,13 +146,13 @@ const HomePage = () => {
         
         </Menu> */}
 
-        <NavbarHeader />
-        
-        {/* <div className="container-fluid text-white">
+            <NavbarHeader />
+
+            {/* <div className="container-fluid text-white">
             Hello
         </div> */}
-        {/* <Layout  style={{backgroundColor: "#111d2c"}} > */}
-        {/* <Layout >
+            {/* <Layout  style={{backgroundColor: "#111d2c"}} > */}
+            {/* <Layout >
             <Content align={'end'}>
                 Light theme/Dark Theme
                 <Switch
@@ -162,23 +162,23 @@ const HomePage = () => {
                 />
             </Content>
         </Layout> */}
-        <div className="random_div" >
-            <MyLayout color={{myBackgroundColor}} textColor={{myTextcolor}} />
-            {/* Note giving id here will not make it work, give ID's to divs inside components */}
-            <MySkills id="skills" color={{myBackgroundColor}} textColor={{myTextcolor}} />
-            {/* <MyExperience color={{myBackgroundColor}} textColor={{myTextcolor}} cardColor={{myCardColor}} /> */}
-            <MyExperience2 color={{myBackgroundColor}} textColor={{myTextcolor}} cardColor={{myCardColor}} />
-            {/* <MyProjects color={{myBackgroundColor}} textColor={{myTextcolor}} cardColor={{myCardColor}} /> */}
-            <MyProjects2 color={{myBackgroundColor}} textColor={{myTextcolor}} cardColor={{myCardColor}} />
-            <ContactMe color={{myBackgroundColor}} textColor={{myTextcolor}} />
-            {/* <VisitorsCount color={{myBackgroundColor}} textColor={{myTextcolor}} /> */}
+            <div className="random_div" >
+                <MyLayout color={{ myBackgroundColor }} textColor={{ myTextcolor }} />
+                {/* Note giving id here will not make it work, give ID's to divs inside components */}
+                <MySkills id="skills" color={{ myBackgroundColor }} textColor={{ myTextcolor }} />
+                {/* <MyExperience color={{myBackgroundColor}} textColor={{myTextcolor}} cardColor={{myCardColor}} /> */}
+                <MyExperience2 color={{ myBackgroundColor }} textColor={{ myTextcolor }} cardColor={{ myCardColor }} />
+                {/* <MyProjects color={{myBackgroundColor}} textColor={{myTextcolor}} cardColor={{myCardColor}} /> */}
+                <MyProjects2 color={{ myBackgroundColor }} textColor={{ myTextcolor }} cardColor={{ myCardColor }} />
+                <ContactMe color={{ myBackgroundColor }} textColor={{ myTextcolor }} />
+                {/* <VisitorsCount color={{myBackgroundColor}} textColor={{myTextcolor}} /> */}
+            </div>
+
+
+
+            <FooterHeader />
         </div>
-
-
-        
-        <FooterHeader />
-    </div>
-  )
+    )
 }
 
 export default HomePage
