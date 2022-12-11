@@ -1,14 +1,15 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 // import {Card, Button, Row, Col, Container} from 'react-bootstrap';
 // import Pagination from 'react-bootstrap/Pagination';
 import NavbarHeader from "../Layout/NavbarHeader";
 import FooterHeader from "../Layout/FooterHeader";
 import MySkills from "../Home Page/MySkills.js"
-import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
+// import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
 import { Menu, Switch, Layout } from 'antd';
 import MyLayout from "./MyLayout";
 import MyProjects from "./MyProjects";
 import ContactMe from "./ContactMe";
+// import VisitorsCount from './VisitorsCount';
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 /*this is for importing dark theme of antd  */
@@ -26,13 +27,13 @@ const MenuItemGroup = Menu.ItemGroup;
 // },
 
 const HomePage = () => {
-    
+
     const [theme, setTheme] = useState('dark');
     const [current, setCurrent] = useState('mail');
 
     const onClick = (e) => {
-      console.log('click ', e);
-      setCurrent(e.key);
+        console.log('click ', e);
+        setCurrent(e.key);
     };
 
     const changeTheme = (value) => {
@@ -105,15 +106,15 @@ const HomePage = () => {
     //         checkedChildren="Dark"
     //         unCheckedChildren="Light"
     //     />
-    
+
     //     ),
     //     key: 'theme',
     // },
     // ];
-  
-  return (
-    <div>
-        {/* <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" theme={theme} items={items} >
+
+    return (
+        <div>
+            {/* <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" theme={theme} items={items} >
 
            <SubMenu style={{float: 'right'}} title={<span>Navigation Three - Submenu</span>}>
                 <MenuItemGroup title="Item 1">
@@ -129,27 +130,27 @@ const HomePage = () => {
         
         </Menu> */}
 
-        <NavbarHeader />
-        
-        {/* <div className="container-fluid text-white">
+            <NavbarHeader />
+
+            {/* <div className="container-fluid text-white">
             Hello
         </div> */}
-        {/* <Layout  style={{backgroundColor: "#111d2c"}} >
+            {/* <Layout  style={{backgroundColor: "#111d2c"}} >
             <Content>my content</Content>
         </Layout> */}
-        <div className="random_div">
-            <MyLayout />
-            {/* Note giving id here will not make it work, give ID's to divs inside components */}
-            <MySkills id="skills" />
-            <MyProjects />
-            <ContactMe />
+            <div className="random_div">
+                <MyLayout />
+                {/* Note giving id here will not make it work, give ID's to divs inside components */}
+                <MySkills id="skills" />
+                <MyProjects />
+                <ContactMe />
+            </div>
+
+
+
+            <FooterHeader />
         </div>
-
-
-
-        <FooterHeader />
-    </div>
-  )
+    )
 }
 
 export default HomePage
