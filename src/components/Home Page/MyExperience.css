@@ -1,17 +1,30 @@
 .myExperience{
     background-image: url("../../images/bg3.png"),
+                        url("../../images/bg3.png"),
+                        url("../../images/bg3.png"),
                         url("../../images/bg5.png"),
+                        url("../../images/bg3.png"),
                         url("../../images/bg6.png"),
-                        url("../../images/bg4.png");
+                        url("../../images/bg4.png"),
+                        url("../../images/bg14.png");
+                        /* url("../../images/bg9.jpg"); */
     background-repeat: no-repeat,
+                        no-repeat,
+                        no-repeat,
+                        no-repeat,
+                        no-repeat,
                         no-repeat,
                         no-repeat,
                         no-repeat;
     /* background-position: 0 top,  */
     background-position: 0 10%, 
-                            90% 40%,
+                            0 30%, 
+                            80% 15%, 
+                            90% 43%,
+                            90% 63%,
                             10% 60%,
-                            90% bottom;
+                            90% bottom,
+                            20% 84%;
 
     
 }
