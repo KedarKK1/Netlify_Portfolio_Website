@@ -3,3 +3,7 @@
     background-position: bottom right;
     background-repeat: no-repeat;
 }
+
+.mySkills > li > img:hover{
+    transform: scale(1.5);
+}

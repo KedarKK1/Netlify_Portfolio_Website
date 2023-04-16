@@ -1,3 +1,7 @@
+.scaleUp:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
 .myExperience{
     background-image: url("../../images/bg3.png"),
                         url("../../images/bg3.png"),
