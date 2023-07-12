@@ -57,7 +57,7 @@ const MyLayout = (props) => {
                                 </h3>
 
                                 <h5 style={{ fontWeight: "400", color: textColor }} data-aos="zoom-out" data-aos-delay="200" data-aos-once >
-                                    I'm <b>Third Year Computer Engineering</b> student at <b>Pune Institute of Computer Technology, Pune</b>. I am interested in Web development and blockchain. Currently exploring AWS and cloud computing. Apart from web & app-development, I love watching anime and sit-coms.
+                                    I'm <b>Fourth(Final) Year Computer Engineering</b> student at <b>Pune Institute of Computer Technology, Pune</b>. I am interested in Web development and blockchain. Currently exploring AWS and cloud computing. Apart from web & app-development, I love watching anime and sit-coms.
                                 </h5>
                             </div>
                         </Col>
