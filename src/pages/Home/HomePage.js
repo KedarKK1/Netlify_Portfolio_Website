@@ -17,6 +17,7 @@ import { useSelector } from 'react-redux';
 import MyProjects2 from '../../components/Home Page/MyProjects2';
 import MyExperience2 from '../../components/Home Page/MyExperience2';
 import VisitorsCount from '../../components/Home Page/VisitorsCount';
+import Archievements from '../../components/Home Page/Archievements';
 
 // const SubMenu = Menu.SubMenu;
 // const MenuItemGroup = Menu.ItemGroup;
@@ -170,7 +171,9 @@ const HomePage = () => {
                 <MyExperience2 color={{ myBackgroundColor }} textColor={{ myTextcolor }} cardColor={{ myCardColor }} />
                 {/* <MyProjects color={{myBackgroundColor}} textColor={{myTextcolor}} cardColor={{myCardColor}} /> */}
                 <MyProjects2 color={{ myBackgroundColor }} textColor={{ myTextcolor }} cardColor={{ myCardColor }} />
+                <Archievements color={{ myBackgroundColor }} textColor={{ myTextcolor }} />
                 <ContactMe color={{ myBackgroundColor }} textColor={{ myTextcolor }} />
+
                 <VisitorsCount color={{myBackgroundColor}} textColor={{myTextcolor}} />
             </div>
 

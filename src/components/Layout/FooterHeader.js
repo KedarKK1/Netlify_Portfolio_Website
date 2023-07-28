@@ -22,7 +22,7 @@ const FooterHeader = () => {
                 backgroundColor: "rgb(10, 41, 92)",
                 color: "rgb(255, 255, 255)"
               }}>
-          Made with ❤️ by Kedar Koshti
+          Made with ❤️ by <a style={{color: 'rgb(230, 230, 255)'}} target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/kedar-koshti/">Kedar Koshti 🧑🏻‍💻</a>
         </Footer>
       </Layout>
     </>
