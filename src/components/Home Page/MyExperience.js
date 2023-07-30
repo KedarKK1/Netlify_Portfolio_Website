@@ -39,8 +39,9 @@ const MyExperience = (props) => {
                                 </ul>
                                 {/* <br /> */}
                                 <Row justify="space-around" align="middle" >
-                                    <a href="http://www.pictTnp.com">Link to Portal</a>
-                                    <a href="http://www.pictTnp.com/about-us">Team FOSS club Link</a>
+                                    {/* <a href="http://www.pictTnp.com">Link to Portal</a> */}
+                                    <a href="https://www.pict-foss-club.github.io">Link to Portal</a>
+                                    <a href="https://www.pict-foss-club.github.io/#team">Team FOSS club Link</a>
                                 </Row>
                             </Card>
                         </Col>

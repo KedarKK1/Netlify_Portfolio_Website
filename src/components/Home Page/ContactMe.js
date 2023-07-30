@@ -49,8 +49,8 @@ const ContactMe = (props) => {
                 <Col xxl={2} xl={2} lg={2} xs={2} md={2} sm={2} style={{backgroundColor: props.color.myBackgroundColor  }} />
 
                 <Col xxl={9} xl={9} lg={9} xs={9} md={9} sm={9} style={{backgroundColor: props.color.myBackgroundColor  }} >
-                    <a href="mailto:officialkedark1@gmail.com" className="px-3"><img style={{ marginTop: "15px"}} src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="badge" /></a>
-                    <a target="_href" href="https://www.linkedin.com/in/kedar-koshti-700804218/"><img style={{ marginTop: 15}} src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="badge" /></a>
+                    <a href="mailto:officialkedark1@gmail.com" className="px-3"><img style={{ marginTop: "15px"}} src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="gmail_badge" /></a>
+                    <a target="_href" href="https://www.linkedin.com/in/kedar-koshti-700804218/"><img style={{ marginTop: 15}} src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="linkedin_badge" /></a>
                 </Col>
 
                 <Col xxl={2} xl={2} lg={2} xs={2} md={2} sm={2} style={{backgroundColor: props.color.myBackgroundColor  }} />

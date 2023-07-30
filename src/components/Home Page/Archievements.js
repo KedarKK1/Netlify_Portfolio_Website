@@ -37,12 +37,12 @@ useEffect(() => {
                             {/* <p style={{ color:textColor }}><h6 style={{ color:textColor }}><b>Features - Static Responsive webpages creation, Backend RESTful API, Sort, Integration</b></h6></p> */}
                         </Timeline.Item>
                         <Timeline.Item color="red">
-                            <p style={{ color:textColor }}><b><h4 style={{ color:textColor }}>300+ DSA questions solved at HackerRank<u></u></h4></b></p>
-                            <p style={{ color:textColor }}><h6 style={{ color:textColor }}><a target="_blank" rel="noreferrer" href="https://www.leetcode.com/KedarKK1/">leetcode.com/KedarKK1/</a></h6></p>
+                            <p style={{ color:textColor }}><b><h4 style={{ color:textColor }}>300+ DSA questions solved at Leetcode<u></u></h4></b></p>
+                            <p style={{ color:textColor }}><h6 style={{ color:textColor }}><a target="_blank" rel="noreferrer" href="https://www.leetcode.com/KedarKK1/"><img style={{ marginTop: 15}} src="https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06" alt="leetcode_badge" /> leetcode.com/KedarKK1/</a></h6></p>
                         </Timeline.Item>
                         <Timeline.Item color="green">
                             <p style={{ color:textColor }}><b><h4 style={{ color:textColor }}>5 star ⭐ coder in Problem Solving at HackerRank (55+ Questions Solved)<u></u></h4></b></p>
-                            <p style={{ color:textColor }}><h6 style={{ color:textColor }}><a target="_blank" rel="noreferrer" href="https://www.hackerrank.com/officialkedark1/">hackerrank.com/officialkedark1/</a></h6></p>
+                            <p style={{ color:textColor }}><h6 style={{ color:textColor }}><a target="_blank" rel="noreferrer" href="https://www.hackerrank.com/officialkedark1/"><img style={{ marginTop: 15}} src="https://img.shields.io/badge/-Hackerrank-2EC866?style=for-the-badge&logo=HackerRank&logoColor=white" alt="hackerrank_badge" />hackerrank.com/officialkedark1/</a></h6></p>
                         </Timeline.Item>
                     </Timeline>
                 </Col>
