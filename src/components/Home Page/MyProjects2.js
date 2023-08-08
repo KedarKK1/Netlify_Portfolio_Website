@@ -39,7 +39,7 @@ const MyProjects2 = (props) => {
                 <Col>
                     {/* <Timeline> */}
                     <Timeline mode="alternate">
-                        <Timeline.Item color="green">
+                        <Timeline.Item color="red">
                             <p style={{ color:textColor }}><b><h4 style={{ color:textColor }}>BiDefi:  Auction Website(Group Project)<u></u></h4></b></p>
                             <p><b><h5>{getIntoTags(["Django-Rest-Framework", "Next JS", "Django-channels", "Redis", "PostgreSQL", "JWT", "Djoser", "Razorpay"])}<u></u></h5></b></p>
                             <p style={{ color:textColor }}>Build  <b><i>entire backend </i></b>for auction website for users to <b><i>post an item for auction.
@@ -47,6 +47,12 @@ const MyProjects2 = (props) => {
                                 <br />Used, WebSockets for real-time betting & within 2 min of previous bid.</i></b></p>
                             <p style={{ color:textColor }}><h6 style={{ color:textColor }}><a target="_blank" rel="noreferrer" href="https://github.com/KedarKK1/auction_website_WTL">Link 🔗</a></h6></p>
                                 
+                        </Timeline.Item>
+                        <Timeline.Item color="green">
+                            <p style={{ color:textColor }}><b><h4 style={{ color:textColor }}>AWS Project - Birthday Reminder App(Solo)<u></u></h4></b></p>
+                            <p><b><h5>{getIntoTags(["AWS S3 Bucket", "AWS Lambda", "AWS DynamoDB", "AWS API Gateway", "AWS EventBridge Scheduler", "AWS SES", "AWS Cloudwatch",])}<u></u></h5></b></p>
+                            <p style={{ color:textColor }}><>Features</> - Static Website <b>Hosted</b> on <b><i>AWS S3, <br /> Add new Birthdays, view all BDs list, view today's BDs list via API(API Gateway & Lambda fn), <br /> Automated Email sending (AWS SES & AWS EventBridge Scheduler)</i></b> to remind today's birthday list, <br /> <b><i>AWS Cloudwatch</i></b> to see metrics</p>
+                            <p style={{ color:textColor }}><h6 style={{ color:textColor }}><a target="_blank" rel="noreferrer" href="https://github.com/KedarKK1/My-AWS-Practical-Experience-Projects-and-Screenshots">Link</a></h6></p>
                         </Timeline.Item>
                         <Timeline.Item color="red">
                             <p style={{ color:textColor }}><b><h4 style={{ color:textColor }}><u>Portfolio Website (Solo)</u></h4></b></p>
@@ -82,12 +88,7 @@ const MyProjects2 = (props) => {
                             <p style={{ color:textColor }}><h6 style={{ color:textColor }}><b>Features</b> - Scraping top 20 products from amazon, then <b>converting</b> it to <b>CSV File</b>, learned about XPath for web-scraping and automation </h6></p>
                             <p style={{ color:textColor }}><h6 style={{ color:textColor }}><a target="_blank" rel="noreferrer" href="https://github.com/KedarKK1/Web-Scrapper-for-amazon">Link 🔗</a></h6></p>
                         </Timeline.Item>
-                        {/* <Timeline.Item color="green">
-                            <p style={{ color:textColor }}><b><h4 style={{ color:textColor }}>B'day Reminder & Daily Task Manager (Solo)<u></u></h4></b></p>
-                            <p><b><h5>{getIntoTags(["Django-Rest-Framework", "React JS", "MySQL", "HTML", "CSS", "Bootstrap", "Javascript", "JQuery",])}<u></u></h5></b></p>
-                            <p style={{ color:textColor }}><>Features</> - <b><i>CRUD, Tags, Searching, Sorting, Task Status update </i></b>Responsive</p>
-                            <p style={{ color:textColor }}><h6 style={{ color:textColor }}><a target="_blank" rel="noreferrer" href="https://github.com/KedarKK1/Advanced-To-do-list-app-using-AntD.git/">Link</a></h6></p>
-                        </Timeline.Item> */}
+
                     </Timeline>
                 </Col>
             </Row>

@@ -72,6 +72,7 @@ const MySkills = (props) => {
                 </li>
                 <li style={{ marginTop: 15, color: textColor }} align={'start'}>
                     <h4 style={{ color: textColor }}>DevOps(Deployment & Version Control) - </h4>
+                    <img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS_badge" />
                     <img src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white" alt="Docker_badge" />
                     <img src="https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white" alt="Kubernetes_badge" />
                     <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub_badge" />
