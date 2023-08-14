@@ -97,6 +97,7 @@ const MySkills = (props) => {
                 </li>
                 <li style={{ marginTop: 15, color: textColor }} align={'start'}>
                     <h4 style={{ color: textColor }}>Tools Used - </h4>
+                    <img src="https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=Hibernate&logoColor=white" alt="Hibernate_badge" />
                     <img src="https://img.shields.io/badge/-GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white" alt="GraphQL_badge" />
                     <img src="https://img.shields.io/badge/-ApolloGraphQL-311C87?style=for-the-badge&logo=apollo-graphql" alt="ApolloGraphQL_badge" />
                     <img src="https://img.shields.io/badge/-Swagger-%23Clojure?style=for-the-badge&logo=swagger&logoColor=white" alt="Swagger_badge" />
