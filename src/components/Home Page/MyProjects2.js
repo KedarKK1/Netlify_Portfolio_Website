@@ -2,7 +2,7 @@
 import { Col, Row, Tag, Timeline } from 'antd';
 // import { Content } from 'antd/lib/layout/layout'
 // import React, { Fragment, useEffect } from 'react';
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Aos from 'aos';
 import "aos/dist/aos.css";
 // import { useSelector } from 'react-redux';
@@ -14,12 +14,24 @@ const MyProjects2 = (props) => {
     const textColor = props.textColor.myTextcolor
     // const myCardColor = theme.theme !== "light" ? "#141E27" : "";
 
+    const [mylayout2, setMyLayout2] = useState(window.innerWidth > 650 ? 'alternate' : 'left');
+
     useEffect(() => {
         Aos.init({
             duration: 500,
         });
 
-    }, [])
+      // Update layout state when window is resized
+      const handleResize = () => {
+        setMyLayout2(window.innerWidth > 650 ? 'alternate' : 'left');
+      };
+  
+      window.addEventListener('resize', handleResize);
+  
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
 
     let colorsArr = ["magenta", "red", "volcano", "orange", "gold", "lime", "green", "cyan", "blue", "geekblue", "purple"]
     const getIntoTags = (tags) => {
@@ -38,7 +50,8 @@ const MyProjects2 = (props) => {
             <Row className="myProjects" style={{ paddingTop: "15px", width: '100%', justifyContent: 'center', color: textColor, backgroundColor: props.color.myBackgroundColor }}>
                 <Col>
                     {/* <Timeline> */}
-                    <Timeline mode="alternate">
+                    {/* <Timeline mode="alternate"> */}
+                    <Timeline mode={mylayout2}>
                         <Timeline.Item color="red">
                             <p style={{ color: textColor }}><b><h4 style={{ color: textColor }}>BiDefi:  Auction Website(Group Project)<u></u></h4></b></p>
                             <p><b><h5>{getIntoTags(["Django-Rest-Framework", "Next JS", "Django-channels", "Redis", "PostgreSQL", "JWT", "Djoser", "Razorpay"])}<u></u></h5></b></p>

@@ -1,10 +1,26 @@
-import React, { Fragment, useEffect } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import Aos from 'aos';
 import "aos/dist/aos.css";
 import { Col, Row, Timeline } from 'antd';
 
 const Archievements = (props) => {
 const textColor = props.textColor.myTextcolor;
+const [layout3, setLayout3] = useState(window.innerWidth > 659 ? 'alternate' : 'left');
+
+  useEffect(() => {
+    // Update layout state when window is resized
+    const handleResize = () => {
+      setLayout3(window.innerWidth > 650 ? 'alternate' : 'left');
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+
 
 useEffect(() => {
     Aos.init({
@@ -19,7 +35,8 @@ useEffect(() => {
             <Row className="myProjects" style={{ paddingTop:"15px",width: '100%', justifyContent: 'center', color: textColor, backgroundColor: props.color.myBackgroundColor }}>
                 <Col>
                     {/* <Timeline> */}
-                    <Timeline mode="alternate">
+                    {/* <Timeline mode="alternate"> */}
+                    <Timeline mode={layout3}>
                         <Timeline.Item color="green">
                             <p style={{ color:textColor }}><b><h4 style={{ color:textColor }}><u>1st Runner-Up 🏆</u></h4></b></p>
                             <p style={{ color:textColor }}><>At</> - <b><i>Webster - Ignite5.0 TechFest Hackathon</i></b></p>

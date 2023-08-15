@@ -18,6 +18,7 @@ import MyProjects2 from '../../components/Home Page/MyProjects2';
 import MyExperience2 from '../../components/Home Page/MyExperience2';
 import VisitorsCount from '../../components/Home Page/VisitorsCount';
 import Archievements from '../../components/Home Page/Archievements';
+import VolunteeringExperience from '../../components/Home Page/VolunteeringExperience';
 
 // const SubMenu = Menu.SubMenu;
 // const MenuItemGroup = Menu.ItemGroup;
@@ -172,6 +173,7 @@ const HomePage = () => {
                 {/* <MyProjects color={{myBackgroundColor}} textColor={{myTextcolor}} cardColor={{myCardColor}} /> */}
                 <MyProjects2 color={{ myBackgroundColor }} textColor={{ myTextcolor }} cardColor={{ myCardColor }} />
                 <Archievements color={{ myBackgroundColor }} textColor={{ myTextcolor }} />
+                <VolunteeringExperience color={{ myBackgroundColor }} textColor={{ myTextcolor }} />
                 <ContactMe color={{ myBackgroundColor }} textColor={{ myTextcolor }} />
 
                 <VisitorsCount color={{myBackgroundColor}} textColor={{myTextcolor}} />

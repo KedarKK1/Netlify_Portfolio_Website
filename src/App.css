@@ -1,7 +1,20 @@
+* {
+  /* line-height: 1.05 !important; */
+}
+
+p{
+  margin-top: 3px !important;
+  margin-bottom: 3px !important;
+  /* padding-top: -5px !important;
+  padding-bottom: -5px !important; */
+}
+
+
 body{
   background: url("./images/bannerBg1.png");
   background-repeat: no-repeat;
   background-position: center;
+  /* line-height: 0.4; */
   /* background-attachment: fixed; */
 }
 
