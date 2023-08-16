@@ -2,6 +2,7 @@ import React, { Fragment, useEffect, useState } from 'react'
 import Aos from 'aos';
 import "aos/dist/aos.css";
 import { Col, Row, Timeline } from 'antd';
+import "./Archievements.css";
 
 const Archievements = (props) => {
 const textColor = props.textColor.myTextcolor;
@@ -32,7 +33,7 @@ useEffect(() => {
   return (
     <div style={{ color:textColor, backgroundColor: props.color.myBackgroundColor }} data-aos="fade-up" data-aos-anchor-placement="top-center">
         <h1 style={{color: textColor, backgroundColor: props.color.myBackgroundColor, marginBottom: '0px', paddingBottom: "15px" }}><b><u>Archievements</u></b> </h1>
-            <Row className="myProjects" style={{ paddingTop:"15px",width: '100%', justifyContent: 'center', color: textColor, backgroundColor: props.color.myBackgroundColor }}>
+            <Row className="myProjectsForArchievements" style={{ paddingTop:"15px",width: '100%', justifyContent: 'center', color: textColor, backgroundColor: props.color.myBackgroundColor }}>
                 <Col>
                     {/* <Timeline> */}
                     {/* <Timeline mode="alternate"> */}

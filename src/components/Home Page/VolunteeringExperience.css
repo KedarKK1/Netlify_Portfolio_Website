@@ -1,0 +1,15 @@
+.giveStyleWhiteColor{
+    .ant-card-meta-description, .ant-card-meta-title{
+        color: white;
+    }
+}
+
+.giveStyleBlackColor{
+    .ant-card-meta-description, .ant-card-meta-title{
+        color: black;
+    }
+}
+
+.giveHoverToCard:hover{
+    transform: scale(1.1);
+}

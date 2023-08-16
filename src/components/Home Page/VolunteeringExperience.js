@@ -9,6 +9,7 @@ import pictIeeeImage2 from '../../images/session conducted on frontend, html, cs
 import pictIeeeImage3 from '../../images/session conducted on frontend, html, css, js, bootstrap & intro-to-reactjs5.jpeg';
 import pictIeeeImage4 from '../../images/session conducted on frontend, html, css, js, bootstrap & intro-to-reactjs2.jpeg';
 import ethereumBankAccount from '../../images/blockchain bank acc.PNG';
+import "./VolunteeringExperience.css"
 
 const { Meta } = Card;
 
@@ -26,7 +27,7 @@ const contentStyle = {
 
 const VolunteeringExperience = (props) => {
 
-    const textColor = props.textColor.myTextcolor;
+    let textColor = props.textColor.myTextcolor;
 
     useEffect(() => {
         Aos.init({
@@ -45,6 +46,7 @@ const VolunteeringExperience = (props) => {
                             width: 300,
                             color: textColor, backgroundColor: props.color.myBackgroundColor
                         }}
+                        className="giveHoverToCard"
                         cover={
                             <img
                                 style={contentStyle}
@@ -67,6 +69,9 @@ const VolunteeringExperience = (props) => {
                                 color: textColor, 
                                 backgroundColor: props.color.myBackgroundColor
                             }}
+                            className={
+                                textColor === "black" ? "giveStyleBlackColor" : "giveStyleWhiteColor"
+                            }
                             // avatar={<Avatar src="https://xsgames.co/randomusers/avatar.php?g=pixel" />}
                             title="SIG Django course Sessions"
                             description="3 sessions for PICT college's official Django Certification Programme(in an team of 3)"
@@ -80,6 +85,7 @@ const VolunteeringExperience = (props) => {
                             width: 300,
                             color: textColor, backgroundColor: props.color.myBackgroundColor
                         }}
+                        className="giveHoverToCard"
                         cover={
                             <Carousel autoplay>
                                 <div>
@@ -124,6 +130,9 @@ const VolunteeringExperience = (props) => {
                                 color: textColor, 
                                 backgroundColor: props.color.myBackgroundColor
                             }}
+                            className={
+                                textColor === "black" ? "giveStyleBlackColor" : "giveStyleWhiteColor"
+                            }
                             title="SIG sessions at PICT IEEE for juniors"
                             description="Conducted 3 offline sessions on Front-end development(HTML, CSS, JS, Bootstrap & intro-to-ReactJS). Impacted 30+ juniors(in an team of 2)"
                         />
@@ -135,6 +144,7 @@ const VolunteeringExperience = (props) => {
                             width: 300,
                             color: textColor, backgroundColor: props.color.myBackgroundColor
                         }}
+                        className="giveHoverToCard"
                         cover={
                             <img
                                 style={contentStyle}
@@ -151,6 +161,9 @@ const VolunteeringExperience = (props) => {
                                 color: textColor, 
                                 backgroundColor: props.color.myBackgroundColor
                             }}
+                            className={
+                                textColor === "black" ? "giveStyleBlackColor" : "giveStyleWhiteColor"
+                            }
                             title="Conducted Blockchain Sessions"
                             description="Conducted majority of 3 sessions on blockchain along with 1 capstone project (Decentralized Bank Account) as GDSC Blockchain core member"
                         />
@@ -161,8 +174,9 @@ const VolunteeringExperience = (props) => {
                     <Card
                         style={{
                             width: 300,
-                            color: textColor, backgroundColor: props.color.myBackgroundColor
+                            backgroundColor: props.color.myBackgroundColor
                         }}
+                        className="giveHoverToCard"
                         cover={
                             <img
                                 style={contentStyle}
@@ -172,21 +186,20 @@ const VolunteeringExperience = (props) => {
                         }
                         actions={[
                             <>
-                            <a target="_blank" rel="noreferrer" href="https://github.com/KedarKK1?tab=repositories">Repositories - link 🔗 </a>
-                            <a target="_blank" rel="noreferrer" href="https://www.holopin.io/@kedarkk1##">See Resources - link 🔗</a>
+                                <a target="_blank" rel="noreferrer" href="https://github.com/KedarKK1?tab=repositories">Repositories - link 🔗 </a>
+                                <a target="_blank" rel="noreferrer" href="https://www.holopin.io/@kedarkk1##">See Resources - link 🔗</a>
                             </>
                         ]}
                     >
                         <Meta
-                            style={{
-                                color: textColor, 
-                                backgroundColor: props.color.myBackgroundColor
-                            }}
+                            className={
+                                textColor === "black" ? "giveStyleBlackColor" : "giveStyleWhiteColor"
+                            }
+                            style={{ backgroundColor: props.color.myBackgroundColor }}
                             title="Hackoberfest'22 Open Source Contributions"
                             description="Conducted majority of 3 sessions on blockchain along with 1 capstone project (Decentralized Bank Account) as GDSC Blockchain core member"
                         />
                     </Card>
-
                 </Col>
             </Row>
         </div>

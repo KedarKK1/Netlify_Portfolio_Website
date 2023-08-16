@@ -6,6 +6,8 @@ import React, { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux';
 // const { Meta } = Card;
 import "./MyExperience.css";
+import { CheckOutlined } from '@ant-design/icons';
+// import jobImg from "../../images/jobImg.jpg";
 
 const MyExperience2 = (props) => {
     const theme = useSelector((state) => state.themeReducer);
@@ -75,6 +77,7 @@ const MyExperience2 = (props) => {
                                     <p style={{ color:textColor }}><h6 style={{ color:textColor }}><b>Tech Stack used/learned -</b></h6><i>{getIntoTags(["Django-Rest-Framework", "React-Native(expo)", "TailwindCSS", "React-native-Paper", "React-navigation", "JWT(Djoser)", "React-maps", "Formik"])}</i></p>
                                     <p style={{ color:textColor }}><h6 style={{ color:textColor }}><a target="_blank" rel="noreferrer"  href="https://github.com/KedarKK1/Glokit/">link</a></h6></p>
                                 </Timeline.Item> */}
+                        {/* <Timeline.Item color="green" dot={<img src={jobImg} width="30px" height="30px" alt="alt for job" />} > */}
                         <Timeline.Item color="green">
                             {/* <p style={{ color:textColor }}><b><h4 style={{ color:textColor }}> <u>PICT FOSS club - MERN(Fullstack Developer Intern) PICT Placement Portal</u></h4>(Aug 22 - Oct 22) <a href="https://drive.google.com/file/d/1qEtcdS9D9niNs9HLaGt0wxxB5ecUXlsb/view?usp=sharing">Internship Certicate</a></b></p> */}
                             <p style={{ color: textColor }}><h4 style={{ color: textColor }}> <u><a target="_blank" rel="noreferrer" href="https://pict-foss-club.github.io/">Fullstack Developer Intern - Part time <br /> Foss Club, PICT <br /> Created Placement Portal 🔗</a> </u></h4>(Sep 01 - Feb 15, <b>[6 MONTHS]) <a target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1qEtcdS9D9niNs9HLaGt0wxxB5ecUXlsb/view?usp=sharing">Internship Certificate</a> & <a target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1NXaep422yxfN_MtoY0d5Ey52b79V2m5g/view?usp=sharing">Project Expanation Video</a> </b></p>
@@ -85,7 +88,8 @@ const MyExperience2 = (props) => {
                             <p style={{ color: textColor }}><h6 style={{ color: textColor }}><a target="_blank" rel="noreferrer" href="https://pict-foss-club.github.io/">To be officially deployed as soon as college approves funds (last stage)...</a></h6></p>
                         </Timeline.Item>
 
-                        <Timeline.Item color="red">
+                        {/* <Timeline.Item color="red" dot={<SmileOutlined />} > */}
+                        <Timeline.Item color="red" >
                             <p style={{ color: textColor }}><h4 style={{ color: textColor }}>  <u>Backend Developer Intern(Full-Time Remote) <br /> <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/company/solvevolve/" >Solvevolve Pvt. Lmt.</a></u></h4>(26 Oct'22 - 30 Dec'22, <b>[2 MONTHS]) <a target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1NpJBOZSOmPhopOs9O53GFUQ0_KVFdW1H/view?usp=sharing">Internship Certificate 🔗</a> & <a target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/124C0A2QCg7x_jg2YLB_1g9OIg5c5lJnk/view?usp=sharing">Letter Of Recommendation(LOR) 🔗</a>
                                 <h5>{getIntoTags(["Node.js", "ExpressJs", "Apollo GraphQl", "MongoDB", "Firebase(for react-native push notification)", "Bull Job Schedule", "Razorpay Webhooks", "Google Auth Library", "Multer", "Nodemailer", "JWT (Access & Refresh Token)", "Aggregation Pipelines", "Algorithms"])}<u></u></h5></b></p>
                             {/* <p style={{ color: textColor }}><small>Created <b>entire backend from scratch within short period of 2 MONTHS</b> for an web (ReactJs, Typescript and Apollo GraphQl) & mobile(React-Native (android)) application, for <b><u>dynamic Subscription Plans (razorpay),</u></b> <b>fetching, storing dynamic no. fields of data over protected REST APIs & fields values for manipulating it (using complex aggregation functions) & showing user their device's data over user's search querry</b> like period, field names(AMP, VOL) & <b>show network error (using Bull job every few min to check last 30 min data)</b> and <b>allow user to perform scheduling for starting ON/OFF device using scheduling algorithm</b> that I created and pushing that job for that device, <b> subscription Plan (Razorpay webhooks fetching from backend)</b></small></p> */}
@@ -101,7 +105,7 @@ const MyExperience2 = (props) => {
                             <p style={{ color: textColor }}><b >1. Invoice Discounting webApp</b> : • Created <b>frontend responsive dashboards & from scratch using function based components</b> and <b>validated fields using Formik</b> for form state for an web application for clients • <b>Integrated searching, sorting and filtering functionality on tables </b> & Used <b>optimisation techniques like debouncing</b> in dashboard page</p>
                             <p style={{ color: textColor }}><b>2. Twistoe CRM webApp</b>: • Created Separate Module for customer email <b>listing using fetchting & implemented pagination, sorting using redux</b>• <b>Improvised code efficiency</b> by <b>identifying reusable code & modularizing it using class-based component</b> code</p>
                         </Timeline.Item>
-                        <Timeline.Item color="red">
+                        <Timeline.Item color="green" dot={<CheckOutlined />}>
                             <p style={{ color: textColor }}><b><h4 style={{ color: textColor }}>Available for your internship/job opportunities<u></u></h4></b></p>
                             <p style={{ color: textColor }}>Applying for internships/jobs for longterm opportunities!</p>
                             {/* <p style={{ color:textColor }}><h6 style={{ color:textColor }}><b>Dependencies used/learned -</b></h6><i>NodeMailer, react-router-dom, react-paginator,</i></p> */}
