@@ -22,8 +22,8 @@ const contentStyle = {
     textAlign: 'center',
     background: '#364d79',
     maxHeight: '300px',
-  };
-  
+};
+
 
 const VolunteeringExperience = (props) => {
 
@@ -61,12 +61,12 @@ const VolunteeringExperience = (props) => {
                             // <SettingOutlined key="setting" />,
                             // <EditOutlined key="edit" />,
                             // <EllipsisOutlined key="ellipsis" />,
-                            <a target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1-oUDQpyhCMScrSEwQsQHrq2rZZtrrVFO/view/">See Certificate of Contribution - link 🔗</a>
+                            <a target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1-oUDQpyhCMScrSEwQsQHrq2rZZtrrVFO/view?usp=sharing">See Certificate of Contribution - link 🔗</a>
                         ]}
                     >
                         <Meta
                             style={{
-                                color: textColor, 
+                                color: textColor,
                                 backgroundColor: props.color.myBackgroundColor
                             }}
                             className={
@@ -121,13 +121,13 @@ const VolunteeringExperience = (props) => {
 
                         }
                         actions={[
-                            <a  target="_blank" rel="noreferrer" href="https://drive.google.com/drive/folders/1fcSIBvKQVCDkh8zUL9C-A7EfvazEECgY?usp=sharing/">See Resources - link 🔗</a>
+                            <a target="_blank" rel="noreferrer" href="https://drive.google.com/drive/folders/1fcSIBvKQVCDkh8zUL9C-A7EfvazEECgY?usp=sharing/">See Resources - link 🔗</a>
 
                         ]}
                     >
                         <Meta
                             style={{
-                                color: textColor, 
+                                color: textColor,
                                 backgroundColor: props.color.myBackgroundColor
                             }}
                             className={
@@ -158,7 +158,7 @@ const VolunteeringExperience = (props) => {
                     >
                         <Meta
                             style={{
-                                color: textColor, 
+                                color: textColor,
                                 backgroundColor: props.color.myBackgroundColor
                             }}
                             className={
