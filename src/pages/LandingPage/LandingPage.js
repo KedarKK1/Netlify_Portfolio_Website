@@ -12,6 +12,7 @@ import { Link } from 'react-router-dom';
 import { useEffect } from 'react'
 import { Helmet } from 'react-helmet'
 import { useSelector } from 'react-redux';
+import ScrollToTopButton from '../../components/ScrollToTopButton/ScrollToTopButton'
 
 const LandingPage = () => {
     const theme = useSelector((state)=>state.themeReducer);
@@ -80,6 +81,8 @@ const LandingPage = () => {
             </div>
 
             <FooterHeader className="mFooter" />
+
+            <ScrollToTopButton />
 
         </Layout>
     </div>

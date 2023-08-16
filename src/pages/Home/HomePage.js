@@ -19,6 +19,7 @@ import MyExperience2 from '../../components/Home Page/MyExperience2';
 import VisitorsCount from '../../components/Home Page/VisitorsCount';
 import Archievements from '../../components/Home Page/Archievements';
 import VolunteeringExperience from '../../components/Home Page/VolunteeringExperience';
+import ScrollToTopButton from '../../components/ScrollToTopButton/ScrollToTopButton';
 
 // const SubMenu = Menu.SubMenu;
 // const MenuItemGroup = Menu.ItemGroup;
@@ -171,17 +172,20 @@ const HomePage = () => {
                 {/* <MyExperience color={{myBackgroundColor}} textColor={{myTextcolor}} cardColor={{myCardColor}} /> */}
                 <MyExperience2 color={{ myBackgroundColor }} textColor={{ myTextcolor }} cardColor={{ myCardColor }} />
                 {/* <MyProjects color={{myBackgroundColor}} textColor={{myTextcolor}} cardColor={{myCardColor}} /> */}
-                <MyProjects2 color={{ myBackgroundColor }} textColor={{ myTextcolor }} cardColor={{ myCardColor }} />
+                <MyProjects2 id="projects" color={{ myBackgroundColor }} textColor={{ myTextcolor }} cardColor={{ myCardColor }} />
                 <Archievements color={{ myBackgroundColor }} textColor={{ myTextcolor }} />
                 <VolunteeringExperience color={{ myBackgroundColor }} textColor={{ myTextcolor }} />
-                <ContactMe color={{ myBackgroundColor }} textColor={{ myTextcolor }} />
+                <ContactMe id="contact" color={{ myBackgroundColor }} textColor={{ myTextcolor }} />
 
                 <VisitorsCount color={{myBackgroundColor}} textColor={{myTextcolor}} />
+
             </div>
 
 
 
             <FooterHeader />
+
+            <ScrollToTopButton />
         </div>
     )
 }

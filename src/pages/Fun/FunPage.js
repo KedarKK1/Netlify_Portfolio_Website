@@ -10,6 +10,7 @@ import { addDoc, collection, getDocs, deleteDoc, doc, updateDoc } from "firebase
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { useSelector } from 'react-redux';
+import ScrollToTopButton from '../../components/ScrollToTopButton/ScrollToTopButton';
 // import InfiniteScroll from 'react-infinite-scroll-component';
 // import firebase from "firebase/compat/app";
 // require('firebase/database');
@@ -252,6 +253,8 @@ const FunPage = () => {
             </Layout>
 
             <FooterHeader />
+
+            <ScrollToTopButton />
         </>
     )
 }
