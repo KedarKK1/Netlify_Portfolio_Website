@@ -36,7 +36,7 @@ const MyExperience2 = (props) => {
     const getIntoTags = (tags) => {
         return tags.map((tag, index) => {
             return (
-                <Tag className="scaleUp" style={{ fontSize: '20px', padding: '10px', margin: "2px" }} color={colorsArr[index % colorsArr.length]}>{tag}</Tag>
+                <Tag key={index} className="scaleUp" style={{ fontSize: '20px', padding: '10px', margin: "2px" }} color={colorsArr[index % colorsArr.length]}>{tag}</Tag>
             )
         })
     }

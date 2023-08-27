@@ -26,14 +26,21 @@ const FunPage = () => {
     const [setImg, setSetImg] = useState([]);
     const [loading, setLoading] = useState(false);
     const [visible, setVisible] = useState(false);
+    const [editMemeId, setEditMemeId] = useState('');
+    const [editMemeUrl, setEditMemeUrl] = useState('');
     const theme = useSelector((state)=>state.themeReducer);
 
     const myBackgroundColor = theme.theme !== "light" ? "#222831" : "";
     const myTextcolor = theme.theme === "light" ? "black" : "white";
     const myCardColor = theme.theme !== "light" ? "black" : "";
     // const [modalText, setModalText] = useState(['id remains same']);
-    const modalText = ['id remains same'];
-    const showModal = () => {
+    // const modalText = ['id remains same'];
+    const showModal = (id, imgUrl) => {
+        // console.log("id ", id);
+        // console.log("imgUrl ", imgUrl);
+        setEditMemeId(id);
+        setEditMemeUrl(imgUrl);
+
         setVisible(true);
     }
     // const handleOk = () => {
@@ -46,14 +53,16 @@ const FunPage = () => {
     // }
     const handleCancel = () => {
         // console.log('Clicked cancel button');
+        setEditMemeId('');
+        setEditMemeUrl('');
         setVisible(false);
     };
-    const onFinish = (values) => {
-        // console.log('Success:', values);
-    };
-    const onFinishFailed = (errorInfo) => {
-        // console.log('Failed:', errorInfo);
-    };
+    // const onFinish = (values) => {
+    //     // console.log('Success:', values);
+    // };
+    // const onFinishFailed = (errorInfo) => {
+    //     // console.log('Failed:', errorInfo);
+    // };
 
     // const createMeme = async () =>
     // {
@@ -107,7 +116,8 @@ const FunPage = () => {
         const url = doc(db, "Image_URL's", id);
         console.log(url);
         await updateDoc(url, {
-            imgUrl: writeMemeUrl //this is value set in firebase database
+            // imgUrl: writeMemeUrl //this is value set in firebase database
+            imgUrl: editMemeUrl //this is value set in firebase database
         })
         window.location.reload();
     }
@@ -201,8 +211,8 @@ const FunPage = () => {
                                 <Col className="my-3" xxl={6} xl={6} lg={6} md={10} sm={10} xs={20} >
                                     <Card bodyStyle={{ backgroundColor: myCardColor}}>
                                         <p style={{ display: 'none' }}> {noOfCards++}</p>
-                                        <img key="{imgSrc.id}" src={imgSrc.imgUrl} className="memeImg" alt={imgSrc.id} />
-                                        <Button type="primary" block style={{ marginTop: "10px" }} onClick={showModal}>Edit</Button>
+                                        <img key={imgSrc.id} src={imgSrc.imgUrl} className="memeImg" alt={imgSrc.imgUrl} />
+                                        <Button type="primary" block style={{ marginTop: "10px" }} onClick={()=>showModal(imgSrc.id, imgSrc.imgUrl)}>Edit</Button>
                                         <Modal
                                             title="Title"
                                             visible={visible}
@@ -210,11 +220,12 @@ const FunPage = () => {
                                             confirmLoading={loading}
                                             onCancel={handleCancel}
                                         >
-                                            <p>{modalText}</p>
-                                            <Form initialValues={{ "ImageUrl": imgSrc.imgUrl }} onFinish={onFinish} onFinishFailed={onFinishFailed} autoComplete="off" >
+                                            {/* <p>{modalText}</p> */}
+                                            {/* <Form initialValues={{ "ImageUrl": imgSrc.imgUrl }} onFinish={onFinish} onFinishFailed={onFinishFailed} autoComplete="off" > */}
+                                            <Form autoComplete="off" >
                                                 <Form.Item
                                                     label="ImageUrl"
-                                                    name="ImageUrl"
+                                                    // name="ImageUrl"
                                                     rules={[
                                                         {
                                                             required: true,
@@ -222,7 +233,8 @@ const FunPage = () => {
                                                         },
                                                     ]}
                                                 >
-                                                    <Input onChange={(event) => { setwriteMemeUrl(event.target.value) }} />
+                                                    {/* <Input value="writeMemeUrl" onChange={(event) => { setwriteMemeUrl(event.target.value) }} /> */}
+                                                    <Input id={editMemeId} value={editMemeUrl} onChange={(e) => {setEditMemeUrl(e.target.value); }} />
                                                 </Form.Item>
 
                                                 {/* <Form.Item
