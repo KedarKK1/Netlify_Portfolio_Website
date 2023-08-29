@@ -53,13 +53,11 @@ const MyProjects2 = (props) => {
                     {/* <Timeline mode="alternate"> */}
                     <Timeline mode={mylayout2}>
                         <Timeline.Item color="red">
-                            <p style={{ color: textColor }}><b><h4 style={{ color: textColor }}>BiDefi:  Auction Website(Group Project)<u></u></h4></b></p>
-                            <p><b><h5>{getIntoTags(["Django-Rest-Framework", "Next JS", "Django-channels", "Redis", "PostgreSQL", "JWT", "Djoser", "Razorpay"])}<u></u></h5></b></p>
-                            <p style={{ color: textColor }}>• Build  <b><i>entire backend </i></b>for auction website for users to <b><i>post an item for auction.
-                                <br />• User can increasingly bet on that item.
-                                <br />• Used, WebSockets for real-time betting & within 2 min of previous bid.</i></b></p>
-                            <p style={{ color: textColor }}><h6 style={{ color: textColor }}><a target="_blank" rel="noreferrer" href="https://github.com/KedarKK1/auction_website_WTL">Link 🔗</a></h6></p>
-
+                            <p style={{ color: textColor }}><b><h4 style={{ color: textColor }}>Quiz App using Springboot (Solo)<u></u></h4></b></p>
+                            <p><b><h5>{getIntoTags(["Springboot", "Angular", "Hibernate", "PostgreSQL", "JPA", "JAVA 11", "JPQL", "HQL", "Microservices"])}<u></u></h5></b></p>
+                            {/* <p style={{ color:textColor }}><h6 style={{ color:textColor }}><b>Tech Stack used/learned -</b></h6><i>Django, Bootstrap</i></p> */}
+                            <p style={{ color: textColor }}><h6 style={{ color: textColor }}><b>Features - • Questions CRUD operations, <br />• Quiz Generation based on Language Type (Java, Py,..), <br />• Result Calculation</b> <br />• Integrated microservices' APIs with frontend(Angular) <br /> <b>v1 - Monolithic & v2 - microservices architecture(question service, quiz service, service-registry, api-gateway).</b></h6></p>
+                            <p style={{ color: textColor }}><h6 style={{ color: textColor }}><a target="_blank" rel="noreferrer" href="https://github.com/KedarKK1/SpringBoot-projects/">Link 🔗</a></h6></p>
                         </Timeline.Item>
                         <Timeline.Item color="green">
                             <p style={{ color: textColor }}><b><h4 style={{ color: textColor }}>AWS Project - Birthday Reminder App(Solo)<u></u></h4></b></p>
@@ -68,11 +66,13 @@ const MyProjects2 = (props) => {
                             <p style={{ color: textColor }}><h6 style={{ color: textColor }}><a target="_blank" rel="noreferrer" href="https://github.com/KedarKK1/My-AWS-Practical-Experience-Projects-and-Screenshots">Link 🔗</a></h6> <br /> <h6 style={{ color: textColor }}><a target="_blank" rel="noreferrer" href="https://clipchamp.com/watch/Iuuqu75ZzqQ">Project Exploration Link 🔗</a></h6></p>
                         </Timeline.Item>
                         <Timeline.Item color="red">
-                            <p style={{ color: textColor }}><b><h4 style={{ color: textColor }}>Quiz App using Springboot (Solo)<u></u></h4></b></p>
-                            <p><b><h5>{getIntoTags(["Springboot", "Hibernate", "PostgreSQL", "JPA", "JAVA 11", "JPQL", "HQL", "Maven"])}<u></u></h5></b></p>
-                            {/* <p style={{ color:textColor }}><h6 style={{ color:textColor }}><b>Tech Stack used/learned -</b></h6><i>Django, Bootstrap</i></p> */}
-                            <p style={{ color: textColor }}><h6 style={{ color: textColor }}><b>Features - • Questions(CRUD), • Quiz Generation based on Language Type (Java, Python, Cpp, etc by category), • Result Calculation</b></h6></p>
-                            <p style={{ color: textColor }}><h6 style={{ color: textColor }}><a target="_blank" rel="noreferrer" href="https://github.com/KedarKK1/SpringBoot-projects/">Link 🔗</a></h6></p>
+                            <p style={{ color: textColor }}><b><h4 style={{ color: textColor }}>BiDefi:  Auction Website(Group Project)<u></u></h4></b></p>
+                            <p><b><h5>{getIntoTags(["Django-Rest-Framework", "Next JS", "Django-channels", "Redis", "PostgreSQL", "JWT", "Djoser", "Razorpay"])}<u></u></h5></b></p>
+                            <p style={{ color: textColor }}>• Build  <b><i>entire backend </i></b>for auction website for users to <b><i>post an item for auction.
+                                <br />• User can increasingly bet on that item.
+                                <br />• Used, WebSockets for real-time betting & within 2 min of previous bid.</i></b></p>
+                            <p style={{ color: textColor }}><h6 style={{ color: textColor }}><a target="_blank" rel="noreferrer" href="https://github.com/KedarKK1/auction_website_WTL">Link 🔗</a></h6></p>
+
                         </Timeline.Item>
                         <Timeline.Item color="green">
                             <p style={{ color: textColor }}><b><h4 style={{ color: textColor }}><u>Portfolio Website (Solo)</u></h4></b></p>
