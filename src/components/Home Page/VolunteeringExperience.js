@@ -9,6 +9,10 @@ import pictIeeeImage2 from '../../images/session conducted on frontend, html, cs
 import pictIeeeImage3 from '../../images/session conducted on frontend, html, css, js, bootstrap & intro-to-reactjs5.jpeg';
 import pictIeeeImage4 from '../../images/session conducted on frontend, html, css, js, bootstrap & intro-to-reactjs2.jpeg';
 import ethereumBankAccount from '../../images/blockchain bank acc.PNG';
+import hacktoberfestImage1 from '../../images/hacktoberfest_image1.PNG';
+import hacktoberfestImage2 from '../../images/hacktoberfest_image2.PNG';
+import hacktoberfestImage3 from '../../images/hacktoberfest_image3.PNG';
+import hacktoberfestImage4 from '../../images/hacktoberfest_image4.PNG';
 import "./VolunteeringExperience.css"
 
 const { Meta } = Card;
@@ -178,11 +182,41 @@ const VolunteeringExperience = (props) => {
                         }}
                         className="giveHoverToCard"
                         cover={
-                            <img
-                                style={contentStyle}
-                                src={ethereumBankAccount}
-                                alt="Hacktoberfest'22 ss"
-                            />
+                            // <img
+                            //     style={contentStyle}
+                            //     src={hacktoberfestImage1}
+                            //     alt="Hacktoberfest'22 ss"
+                            // />
+                            <Carousel autoplay>
+                                <div>
+                                    <img
+                                        style={contentStyle}
+                                        src={hacktoberfestImage1}
+                                        alt="Hacktoberfest'22 ss"
+                                    />
+                                </div>
+                                <div>
+                                    <img
+                                        style={contentStyle}
+                                        src={hacktoberfestImage2}
+                                        alt="Hacktoberfest'22 ss2"
+                                    />
+                                </div>
+                                <div>
+                                    <img
+                                        style={contentStyle}
+                                        src={hacktoberfestImage3}
+                                        alt="Hacktoberfest'22 ss3"
+                                    />
+                                </div>
+                                <div>
+                                    <img
+                                        style={contentStyle}
+                                        src={hacktoberfestImage4}
+                                        alt="Hacktoberfest'22 ss4"
+                                    />
+                                </div>
+                            </Carousel>
                         }
                         actions={[
                             <>
@@ -197,7 +231,14 @@ const VolunteeringExperience = (props) => {
                             }
                             style={{ backgroundColor: props.color.myBackgroundColor }}
                             title="Hackoberfest'22 Open Source Contributions"
-                            description="Conducted majority of 3 sessions on blockchain along with 1 capstone project (Decentralized Bank Account) as GDSC Blockchain core member"
+                            description='
+                            Open Source Contributions - 
+                            1. added Dark-Light functionality using js for online notepad,
+                            2. Live-reloading to a quote generator & reload again button for "Guess the Number" game using JQuery, 
+                            3. AJAX for calculator app, 
+                            4. enhanced webpage-designs & fixed responsiveness of sites, 
+                            '
+                        // 5.added documentation to projects, 
                         />
                     </Card>
                 </Col>

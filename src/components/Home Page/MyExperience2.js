@@ -8,11 +8,12 @@ import { useSelector } from 'react-redux';
 import "./MyExperience.css";
 import { CheckOutlined } from '@ant-design/icons';
 // import jobImg from "../../images/jobImg.jpg";
+import pictIeeeImage2 from '../../images/session conducted on frontend, html, css, js, bootstrap & intro-to-reactjs4.jpeg';
 
 const MyExperience2 = (props) => {
     const theme = useSelector((state) => state.themeReducer);
     // const textColor = props.textColor.myTextcolor
-    const textColor = theme.theme !== "light" ? "white" : "black"
+    const textColor = theme.theme !== "light" ? "white" : "black";
     // const myCardColor = theme.theme != "light" ? "#222222" : "";
     // const myCardColor = theme.theme !== "light" ? "#141E27" : "";
 
@@ -52,6 +53,7 @@ const MyExperience2 = (props) => {
                     {/* <Timeline mode="alternate"> */}
                     <Timeline mode={mylayout}>
                         <Timeline.Item color="red">
+                            <p style={{ color: textColor }}><img src={pictIeeeImage2} width={"50%"} alt="pictIeeeImage2" /></p>
                             <p style={{ color: textColor }}><h4 style={{ color: textColor }}>1. IEEE Fest - Credenz Tech Days (CTD) - Frontend(React JS) + Integration<u></u></h4>(Jul 22 - Nov 06, <b>[5 MONTHS])</b></p>
                             <p style={{ color: textColor }}><div style={{ color: textColor }}><b>Event -</b><i>Credenz Tech Days (CTD)`22 by PICT IEEE - RC(Reverse Coding) Head</i></div></p>
                             <p style={{ color: textColor }}><b>Task</b> - <b><i>Entire frontend Responsive webpages creation, Integration tasks(Ace-editor, Pagination, Timer, Logout functionality with Django), </i></b>Responsiveness along with beautiful UI</p>

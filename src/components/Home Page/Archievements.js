@@ -55,7 +55,7 @@ useEffect(() => {
                             {/* <p style={{ color:textColor }}><h6 style={{ color:textColor }}><b>Features - Static Responsive webpages creation, Backend RESTful API, Sort, Integration</b></h6></p> */}
                         </Timeline.Item>
                         <Timeline.Item color="red">
-                            <p style={{ color:textColor }}><b><h4 style={{ color:textColor }}>300+ DSA questions solved at Leetcode<u></u></h4></b></p>
+                            <p style={{ color:textColor }}><b><h4 style={{ color:textColor }}>375+ DSA questions solved at Leetcode<u></u></h4></b></p>
                             <p style={{ color:textColor }}><h6 style={{ color:textColor }}><a target="_blank" rel="noreferrer" href="https://www.leetcode.com/KedarKK1/"><img style={{ marginTop: 15}} src="https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06" alt="leetcode_badge" /> leetcode.com/KedarKK1/ 🔗</a></h6></p>
                         </Timeline.Item>
                         <Timeline.Item color="green">
