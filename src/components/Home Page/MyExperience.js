@@ -16,7 +16,7 @@ const MyExperience = (props) => {
             <Layout>
                 <Content style={{ paddingTop: 15, paddingBottom: 15, backgroundColor: props.color.myBackgroundColor }} >
                     <h1 style={{ color: textColor }}> <b><u>My Experience</u></b> </h1>
-                    <Row c>
+                    <Row >
                         <Col xxl={2} xl={2} lg={2} xs={2} md={2} sm={2} />
 
                         <Col xxl={6} xl={6} lg={6} xs={20} md={20} sm={20} >
