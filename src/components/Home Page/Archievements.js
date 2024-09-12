@@ -38,8 +38,15 @@ useEffect(() => {
                     {/* <Timeline> */}
                     {/* <Timeline mode="alternate"> */}
                     <Timeline mode={layout3}>
+                      <Timeline.Item color="red">
+                            <p style={{ color:textColor }}><b><h4 style={{ color:textColor }}><u>Runner-Up 🏆 amongst 45+ teams</u></h4></b></p>
+                            <p style={{ color:textColor }}><>At</> - <b><i>Cudefury Hackathon</i></b></p>
+                            <p style={{ color:textColor }}><>Org. by</> - <b><i>HSBC Software Development, Pune</i></b>, conducted after our training at HSBC was over</p>
+                            <p style={{ color:textColor }}>Won gift cards as reward apart from certification & our team was facilitated in-front of all the other 45+ teams in grad ceremony at HSBC</p>
+                            <p style={{ color:textColor }}><h6 style={{ color:textColor }}><a target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1hfmPDhUQNYeDDb6yHlktQYc5EkjKbJVB/view?usp=sharing">Certificate link 🔗</a></h6></p>
+                        </Timeline.Item>
                         <Timeline.Item color="green">
-                            <p style={{ color:textColor }}><b><h4 style={{ color:textColor }}><u>1st Runner-Up 🏆</u></h4></b></p>
+                            <p style={{ color:textColor }}><b><h4 style={{ color:textColor }}><u>1st Runner-Up 🏆 amongst 30+ teams</u></h4></b></p>
                             <p style={{ color:textColor }}><>At</> - <b><i>Webster - Ignite5.0 TechFest Hackathon</i></b></p>
                             <p style={{ color:textColor }}><>Org. by</> - <b><i>NMIMS, Navi Mumbai</i></b></p>
                             <p style={{ color:textColor }}><h6 style={{ color:textColor }}><a target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1bjudMlmYM3Z5KciRKNPilyKhMpul-XDg/view?usp=sharing">Certificate link 🔗</a></h6><h6 style={{ color:textColor }}><a target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1iiV_1geCyPXEO9blV_vwt4scLPNBfkGY/view">Link 🔗</a></h6></p>
@@ -55,7 +62,7 @@ useEffect(() => {
                             {/* <p style={{ color:textColor }}><h6 style={{ color:textColor }}><b>Features - Static Responsive webpages creation, Backend RESTful API, Sort, Integration</b></h6></p> */}
                         </Timeline.Item>
                         <Timeline.Item color="red">
-                            <p style={{ color:textColor }}><b><h4 style={{ color:textColor }}>400+ DSA questions solved at Leetcode<u></u></h4></b></p>
+                            <p style={{ color:textColor }}><b><h4 style={{ color:textColor }}>500+ DSA questions solved at Leetcode<u></u></h4></b></p>
                             <p style={{ color:textColor }}><h6 style={{ color:textColor }}><a target="_blank" rel="noreferrer" href="https://www.leetcode.com/KedarKK1/"><img style={{ marginTop: 15}} src="https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06" alt="leetcode_badge" /> leetcode.com/KedarKK1/ 🔗</a></h6></p>
                         </Timeline.Item>
                         <Timeline.Item color="green">

@@ -18,10 +18,10 @@ const LandingPage = () => {
     const theme = useSelector((state)=>state.themeReducer);
 
     const myInterest = [
-        "Student (PICT'24)",
-        "Full Stack Web-Developer",
+        // "Student (PICT'24)",
+        "Full Stack Web-Developer @HSBC Software Development",
         "Open-Source Software Enthusiast from India",
-        "Blockchain enthusiast",
+        // "Blockchain enthusiast",
     ]
 
     useEffect(() => {
