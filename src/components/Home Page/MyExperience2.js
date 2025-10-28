@@ -53,12 +53,24 @@ const MyExperience2 = (props) => {
                     {/* <Timeline mode="alternate"> */}
                     <Timeline mode={mylayout}>
                         <Timeline.Item color="green">
+                            <p style={{ color: textColor }}><i>{getIntoTags(["Spring Boot", "Core Java", "Python", "React JS", "Batch Shell Script"])}</i></p>
                             {/* <p style={{ color: textColor }}><img src={pictIeeeImage2} width={"50%"} alt="pictIeeeImage2" /></p> */}
-                            <p style={{ color: textColor }}><h4 style={{ color: textColor }}>Software Engineer (Full Stack Developer)- HSBC Software Development<u></u></h4>(Jul 13, 2024 - Present)</p>
-                            <p style={{ color: textColor }}><div style={{ color: textColor }}>Completed training on - <b>Core JAVA, Springboot, JUnit, etc</b> (13 Jul 2024 - 3 Sept 2024)</div></p>
-                            <p style={{ color: textColor }}>Currently working on springboot, java, in trade processing team of Markets & Security Department</p>
+                            <p style={{ color: textColor }}><h4 style={{ color: textColor }}>Software Engineer (Full Stack Developer)- HSBC Software Development<u></u></h4>(Jul 13, 2024 - Present | <b>1 Year 4 months</b>)</p>
+                            {/* <p style={{ color: textColor }}>Currently working on springboot, java, in trade processing team of Markets & Security Department</p> */}
+                            <p style={{ color: textColor }}>• Developed & maintained the backend of the <b>APEX rule-engine module for ETL (enrichment & validation) processes</b> in a trade data workflow engine using <b>Java Spring Boot, Maven, Docker & PostgreSQL</b></p>
+
+                            <p style={{ color: textColor }}>• Designed and developed a <b>Python utility</b> to automate the <u>generation of thousands of XML files</u> (used for APEX-rule-engine data processing pipeline’s testing) by fetching data from SQL queries, <b>eliminating hours of manual effort & improving testing efficiency</b>. Written tests & documentation for the initiative.</p>
+
+                            <p style={{ color: textColor }}>• Automated the <u>data-backup (in zip format) & purging older backup-files</u> using <b>batch shell scripts</b>, scheduled on weekly-basis on production & UAT servers, resulting deletion of approx. 150k files & <b>saving 750 MB per week. Automating entire process</b>, e2e testing and Documentation, taking ownership of the project. [per file 5 kb of file, 20k per day trades]</p>
+
+                            <p style={{ color: textColor }}>• Spearheaded development of a <b>python utility</b> used by team for <b><u>streamlining the changelog tracking (version-control)</u></b> made to an internal tool (Markit EDM) by <b><u>fetching XML changelogs from SQL query and automating commits to GitHub on user's behalve</u></b> for tracking changes made by user. <b><u>Optimized query performance by 95%</u></b>, reducing query time from minutes to few seconds using temporary DB for efficient XML changelogs retrieval. Collaborated with team for deciding the commit structure (comments) for setting up CI/CD pipelines & devops practices.</p>
+
+                            <p style={{ color: textColor }}>• Implemented & <b>shipped a Java Spring Boot based automation solution to orchestrate and monitor 15+ processes via Rundeck APIs</b>, automating end-to-end DB server reboot workflows and <b>improving operational reliability</b>; developed unit and integration tests for validation</p>
+
+                            <p style={{ color: textColor }}>• Developed frontend dashboard for an order to trade lifecycle monitoring system in a tabular format using <b>React.js, used Redux</b> for state management & pagination</p>
+
                             {/* <p style={{ color: textColor }}><h6 style={{ color: textColor }}><b>Tech Stack used/learned -</b></h6><i>{getIntoTags(["ReactJS", "Ace-editor", "HTML", "CSS", "React-Bootstrap", "React-Pagination", "Django", "JQuery"])}</i></p> */}
-                            <p style={{ color: textColor }}><i>{getIntoTags(["Springboot", "Java", "ReactJS"])}</i></p>
+                            <p style={{ color: textColor }}><div style={{ color: textColor }}>Completed training on - <b>Core JAVA, Springboot, JUnit, etc</b> (13 Jul 2024 - 3 Sept 2024)</div></p>
                         </Timeline.Item>
                         <Timeline.Item color="red">
                             <p style={{ color: textColor }}><h4 style={{ color: textColor }}>  <u>Frontend Development Intern(Part-Time Remote) <br /> <a target="_blank" rel="noreferrer" href="https://www.intertwinetechnologies.com/">Intertwine Technologies(Previously Offeraya), Pune 🔗</a></u></h4>(10 Apr'23 - 10 July'23, <b>[3 MONTHS]) <a target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1nr5MDQHyRgUgOQmq6RicyB1Lvtmdcihd/view?usp=sharing">Internship Certificate 🔗</a>
