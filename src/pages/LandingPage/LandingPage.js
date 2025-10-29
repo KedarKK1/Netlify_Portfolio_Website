@@ -19,7 +19,7 @@ const LandingPage = () => {
 
     const myInterest = [
         // "Student (PICT'24)",
-        "Full Stack Web-Developer @HSBC Software Development",
+        "Full Stack Software Engineer @HSBC Software Development, India",
         "Open-Source Software Enthusiast from India",
         // "Blockchain enthusiast",
     ]
