@@ -53,7 +53,7 @@ const MyExperience2 = (props) => {
                     {/* <Timeline mode="alternate"> */}
                     <Timeline mode={mylayout}>
                         <Timeline.Item color="green">
-                            <p style={{ color: textColor }}><i>{getIntoTags(["Spring Boot", "Core Java", "Python", "React JS", "Batch Shell Script"])}</i></p>
+                            <p style={{ color: textColor }}><i>{getIntoTags(["Spring Boot", "Core Java", "Python", "React JS", "Batch Shell Script", "Docker", "Ansible"])}</i></p>
                             {/* <p style={{ color: textColor }}><img src={pictIeeeImage2} width={"50%"} alt="pictIeeeImage2" /></p> */}
                             <p style={{ color: textColor }}><h4 style={{ color: textColor }}>Software Engineer (Full Stack Developer)- HSBC Software Development<u></u></h4>(Jul 13, 2024 - Present | <b>1 Year 4 months</b>)</p>
                             {/* <p style={{ color: textColor }}>Currently working on springboot, java, in trade processing team of Markets & Security Department</p> */}
